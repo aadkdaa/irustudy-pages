@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f3eb">
+    <title>이루의 작은 영어책</title>
+    <link rel="stylesheet" href="./styles/app.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="header">
+        <button id="brand" class="brand" aria-label="이루의 작은 영어책" type="button">
+          <span class="brand-mark" aria-hidden="true">i.</span>
+          <span>이루의 작은 영어책</span>
+        </button>
+        <span class="header-note" aria-hidden="true">a little, every day</span>
+      </header>
+      <main id="app" tabindex="-1"><p class="loading" role="status">작은 영어책을 펼치고 있어요…</p></main>
+      <footer>조금씩, 즐겁게, 나의 속도로.</footer>
+    </div>
+    <dialog id="settings" aria-labelledby="settings-title">
+      <form id="settings-form">
+        <div class="dialog-heading"><h2 id="settings-title">학습 설정</h2><button type="button" id="close-settings" class="icon-button" aria-label="닫기">×</button></div>
+        <p>필요할 때 시작 단계를 변경할 수 있어요.</p>
+        <label for="stage-select">시작 단계</label>
+        <select id="stage-select" name="stage"></select>
+        <p id="saved-status" class="settings-note"></p>
+        <p class="settings-note">다른 단계로 변경하면 해당 단계의 완료 일수는 처음부터 셉니다. 오늘 학습 기록은 유지돼요.</p>
+        <button class="button primary" type="submit">저장</button>
+      </form>
+    </dialog>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,818 @@
+[
+  {
+    "id": "cat",
+    "text": "cat",
+    "topic": "animal-friends",
+    "image": "assets/images/cat.webp",
+    "audio": "assets/audio/cat.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "dog",
+    "text": "dog",
+    "topic": "animal-friends",
+    "image": "assets/images/dog.webp",
+    "audio": "assets/audio/dog.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "pig",
+    "text": "pig",
+    "topic": "animal-friends",
+    "image": "assets/images/pig.webp",
+    "audio": "assets/audio/pig.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "duck",
+    "text": "duck",
+    "topic": "animal-friends",
+    "image": "assets/images/duck.webp",
+    "audio": "assets/audio/duck.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "rabbit",
+    "text": "rabbit",
+    "topic": "animal-friends",
+    "image": "assets/images/rabbit.webp",
+    "audio": "assets/audio/rabbit.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "bear",
+    "text": "bear",
+    "topic": "animal-friends",
+    "image": "assets/images/bear.webp",
+    "audio": "assets/audio/bear.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "ball",
+    "text": "ball",
+    "topic": "favorite-toys",
+    "image": "assets/images/ball.webp",
+    "audio": "assets/audio/ball.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "fish",
+    "text": "fish",
+    "topic": "under-the-sea",
+    "image": "assets/images/fish.webp",
+    "audio": "assets/audio/fish.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "apple",
+    "text": "apple",
+    "topic": "favorite-treats",
+    "image": "assets/images/apple.webp",
+    "audio": "assets/audio/apple.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "banana",
+    "text": "banana",
+    "topic": "favorite-treats",
+    "image": "assets/images/banana.webp",
+    "audio": "assets/audio/banana.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "car",
+    "text": "car",
+    "topic": "rides",
+    "image": "assets/images/car.webp",
+    "audio": "assets/audio/car.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "bus",
+    "text": "bus",
+    "topic": "rides",
+    "image": "assets/images/bus.webp",
+    "audio": "assets/audio/bus.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "jump",
+    "text": "jump",
+    "topic": "move-and-play",
+    "image": "assets/images/jump.webp",
+    "audio": "assets/audio/jump.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "run",
+    "text": "run",
+    "topic": "move-and-play",
+    "image": "assets/images/run.webp",
+    "audio": "assets/audio/run.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "red",
+    "text": "red",
+    "topic": "color-play",
+    "image": "assets/images/red.webp",
+    "audio": "assets/audio/red.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "blue",
+    "text": "blue",
+    "topic": "color-play",
+    "image": "assets/images/blue.webp",
+    "audio": "assets/audio/blue.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "sun",
+    "text": "sun",
+    "topic": "little-outdoors",
+    "image": "assets/images/sun.webp",
+    "audio": "assets/audio/sun.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "moon",
+    "text": "moon",
+    "topic": "little-outdoors",
+    "image": "assets/images/moon.webp",
+    "audio": "assets/audio/moon.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "mother",
+    "text": "mom",
+    "topic": "my-world",
+    "image": "assets/images/mother.webp",
+    "audio": "assets/audio/mother.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "father",
+    "text": "dad",
+    "topic": "my-world",
+    "image": "assets/images/father.webp",
+    "audio": "assets/audio/father.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "dinosaur",
+    "text": "dinosaur",
+    "topic": "imagination",
+    "image": "assets/images/dinosaur.webp",
+    "audio": "assets/audio/dinosaur.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "dragon",
+    "text": "dragon",
+    "topic": "imagination",
+    "image": "assets/images/dragon.webp",
+    "audio": "assets/audio/dragon.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "slide",
+    "text": "slide",
+    "topic": "playground-fun",
+    "image": "assets/images/slide.webp",
+    "audio": "assets/audio/slide.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "swing",
+    "text": "swing",
+    "topic": "playground-fun",
+    "image": "assets/images/swing.webp",
+    "audio": "assets/audio/swing.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "monkey",
+    "text": "monkey",
+    "topic": "animal-friends",
+    "image": "assets/images/monkey.webp",
+    "audio": "assets/audio/monkey.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "elephant",
+    "text": "elephant",
+    "topic": "animal-friends",
+    "image": "assets/images/elephant.webp",
+    "audio": "assets/audio/elephant.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "robot",
+    "text": "robot",
+    "topic": "favorite-toys",
+    "image": "assets/images/robot.webp",
+    "audio": "assets/audio/robot.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "doll",
+    "text": "doll",
+    "topic": "favorite-toys",
+    "image": "assets/images/doll.webp",
+    "audio": "assets/audio/doll.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "strawberry",
+    "text": "strawberry",
+    "topic": "favorite-treats",
+    "image": "assets/images/strawberry.webp",
+    "audio": "assets/audio/strawberry.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "watermelon",
+    "text": "watermelon",
+    "topic": "favorite-treats",
+    "image": "assets/images/watermelon.webp",
+    "audio": "assets/audio/watermelon.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "train",
+    "text": "train",
+    "topic": "rides",
+    "image": "assets/images/train.webp",
+    "audio": "assets/audio/train.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "plane",
+    "text": "plane",
+    "topic": "rides",
+    "image": "assets/images/plane.webp",
+    "audio": "assets/audio/plane.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "dance",
+    "text": "dance",
+    "topic": "move-and-play",
+    "image": "assets/images/dance.webp",
+    "audio": "assets/audio/dance.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "clap",
+    "text": "clap",
+    "topic": "move-and-play",
+    "image": "assets/images/clap.webp",
+    "audio": "assets/audio/clap.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "yellow",
+    "text": "yellow",
+    "topic": "color-play",
+    "image": "assets/images/yellow.webp",
+    "audio": "assets/audio/yellow.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "green",
+    "text": "green",
+    "topic": "color-play",
+    "image": "assets/images/green.webp",
+    "audio": "assets/audio/green.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "star",
+    "text": "star",
+    "topic": "little-outdoors",
+    "image": "assets/images/star.webp",
+    "audio": "assets/audio/star.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "cloud",
+    "text": "cloud",
+    "topic": "little-outdoors",
+    "image": "assets/images/cloud.webp",
+    "audio": "assets/audio/cloud.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "baby",
+    "text": "baby",
+    "topic": "my-world",
+    "image": "assets/images/baby.webp",
+    "audio": "assets/audio/baby.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "family",
+    "text": "family",
+    "topic": "my-world",
+    "image": "assets/images/family.webp",
+    "audio": "assets/audio/family.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "unicorn",
+    "text": "unicorn",
+    "topic": "imagination",
+    "image": "assets/images/unicorn.webp",
+    "audio": "assets/audio/unicorn.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "monster",
+    "text": "monster",
+    "topic": "imagination",
+    "image": "assets/images/monster.webp",
+    "audio": "assets/audio/monster.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "frog",
+    "text": "frog",
+    "topic": "friendly-animals",
+    "image": "assets/images/frog.webp",
+    "audio": "assets/audio/frog.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "sandbox",
+    "text": "sandbox",
+    "topic": "playground-fun",
+    "image": "assets/images/sandbox.webp",
+    "audio": "assets/audio/sandbox.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "lion",
+    "text": "lion",
+    "topic": "animal-friends",
+    "image": "assets/images/lion.webp",
+    "audio": "assets/audio/lion.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "giraffe",
+    "text": "giraffe",
+    "topic": "animal-friends",
+    "image": "assets/images/giraffe.webp",
+    "audio": "assets/audio/giraffe.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "kite",
+    "text": "kite",
+    "topic": "favorite-toys",
+    "image": "assets/images/kite.webp",
+    "audio": "assets/audio/kite.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "balloon",
+    "text": "balloon",
+    "topic": "favorite-toys",
+    "image": "assets/images/balloon.webp",
+    "audio": "assets/audio/balloon.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "grape",
+    "text": "grapes",
+    "topic": "favorite-treats",
+    "image": "assets/images/grape.webp",
+    "audio": "assets/audio/grape.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "orange",
+    "text": "orange",
+    "topic": "favorite-treats",
+    "image": "assets/images/orange.webp",
+    "audio": "assets/audio/orange.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "boat",
+    "text": "boat",
+    "topic": "rides",
+    "image": "assets/images/boat.webp",
+    "audio": "assets/audio/boat.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "bike",
+    "text": "bicycle",
+    "topic": "rides",
+    "image": "assets/images/bike.webp",
+    "audio": "assets/audio/bike.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "wave",
+    "text": "wave",
+    "topic": "little-outdoors",
+    "image": "assets/images/wave.webp",
+    "audio": "assets/audio/wave.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "kick",
+    "text": "kick",
+    "topic": "move-and-play",
+    "image": "assets/images/kick.webp",
+    "audio": "assets/audio/kick.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "pink",
+    "text": "pink",
+    "topic": "color-play",
+    "image": "assets/images/pink.webp",
+    "audio": "assets/audio/pink.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "purple",
+    "text": "purple",
+    "topic": "color-play",
+    "image": "assets/images/purple.webp",
+    "audio": "assets/audio/purple.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "tree",
+    "text": "tree",
+    "topic": "little-outdoors",
+    "image": "assets/images/tree.webp",
+    "audio": "assets/audio/tree.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "flower",
+    "text": "flower",
+    "topic": "little-outdoors",
+    "image": "assets/images/flower.webp",
+    "audio": "assets/audio/flower.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "friend",
+    "text": "friend",
+    "topic": "my-world",
+    "image": "assets/images/friend.webp",
+    "audio": "assets/audio/friend.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "book",
+    "text": "book",
+    "topic": "my-world",
+    "image": "assets/images/book.webp",
+    "audio": "assets/audio/book.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "fairy",
+    "text": "fairy",
+    "topic": "imagination",
+    "image": "assets/images/fairy.webp",
+    "audio": "assets/audio/fairy.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "penguin",
+    "text": "penguin",
+    "topic": "zoo-friends",
+    "image": "assets/images/penguin.webp",
+    "audio": "assets/audio/penguin.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "trampoline",
+    "text": "trampoline",
+    "topic": "playground-fun",
+    "image": "assets/images/trampoline.webp",
+    "audio": "assets/audio/trampoline.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "pool",
+    "text": "pool",
+    "topic": "playground-fun",
+    "image": "assets/images/pool.webp",
+    "audio": "assets/audio/pool.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "bubbles",
+    "text": "bubbles",
+    "topic": "favorite-toys",
+    "image": "assets/images/bubbles.webp",
+    "audio": "assets/audio/bubbles.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "drum",
+    "text": "drum",
+    "topic": "music",
+    "image": "assets/images/drum.webp",
+    "audio": "assets/audio/drum.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "ice-cream",
+    "text": "ice cream",
+    "topic": "favorite-treats",
+    "image": "assets/images/ice-cream.webp",
+    "audio": "assets/audio/ice-cream.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "cake",
+    "text": "cake",
+    "topic": "favorite-treats",
+    "image": "assets/images/cake.webp",
+    "audio": "assets/audio/cake.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "truck",
+    "text": "truck",
+    "topic": "rides",
+    "image": "assets/images/truck.webp",
+    "audio": "assets/audio/truck.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "turtle",
+    "text": "turtle",
+    "topic": "friendly-animals",
+    "image": "assets/images/turtle.webp",
+    "audio": "assets/audio/turtle.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "throw",
+    "text": "throw",
+    "topic": "move-and-play",
+    "image": "assets/images/throw.webp",
+    "audio": "assets/audio/throw.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "catch",
+    "text": "catch",
+    "topic": "move-and-play",
+    "image": "assets/images/catch.webp",
+    "audio": "assets/audio/catch.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "black",
+    "text": "black",
+    "topic": "color-play",
+    "image": "assets/images/black.webp",
+    "audio": "assets/audio/black.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "white",
+    "text": "white",
+    "topic": "color-play",
+    "image": "assets/images/white.webp",
+    "audio": "assets/audio/white.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "butterfly",
+    "text": "butterfly",
+    "topic": "little-outdoors",
+    "image": "assets/images/butterfly.webp",
+    "audio": "assets/audio/butterfly.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "bee",
+    "text": "bee",
+    "topic": "little-outdoors",
+    "image": "assets/images/bee.webp",
+    "audio": "assets/audio/bee.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "bed",
+    "text": "bed",
+    "topic": "my-world",
+    "image": "assets/images/bed.webp",
+    "audio": "assets/audio/bed.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "chair",
+    "text": "chair",
+    "topic": "my-world",
+    "image": "assets/images/chair.webp",
+    "audio": "assets/audio/chair.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "pirate",
+    "text": "pirate",
+    "topic": "imagination",
+    "image": "assets/images/pirate.webp",
+    "audio": "assets/audio/pirate.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "superhero",
+    "text": "superhero",
+    "topic": "imagination",
+    "image": "assets/images/superhero.webp",
+    "audio": "assets/audio/superhero.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "water",
+    "text": "water",
+    "topic": "playground-fun",
+    "image": "assets/images/water.webp",
+    "audio": "assets/audio/water.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "sand",
+    "text": "sand",
+    "topic": "playground-fun",
+    "image": "assets/images/sand.webp",
+    "audio": "assets/audio/sand.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "puzzle",
+    "text": "puzzle",
+    "topic": "favorite-toys",
+    "image": "assets/images/puzzle.webp",
+    "audio": "assets/audio/puzzle.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "pizza",
+    "text": "pizza",
+    "topic": "snack-time",
+    "image": "assets/images/pizza.webp",
+    "audio": "assets/audio/pizza.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "cookie",
+    "text": "cookie",
+    "topic": "favorite-treats",
+    "image": "assets/images/cookie.webp",
+    "audio": "assets/audio/cookie.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "juice",
+    "text": "juice",
+    "topic": "favorite-treats",
+    "image": "assets/images/juice.webp",
+    "audio": "assets/audio/juice.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "tiger",
+    "text": "tiger",
+    "topic": "zoo-friends",
+    "image": "assets/images/tiger.webp",
+    "audio": "assets/audio/tiger.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "rocket",
+    "text": "rocket",
+    "topic": "rides",
+    "image": "assets/images/rocket.webp",
+    "audio": "assets/audio/rocket.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "roll",
+    "text": "roll",
+    "topic": "move-and-play",
+    "image": "assets/images/roll.webp",
+    "audio": "assets/audio/roll.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "hide",
+    "text": "hide",
+    "topic": "move-and-play",
+    "image": "assets/images/hide.webp",
+    "audio": "assets/audio/hide.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "brown",
+    "text": "brown",
+    "topic": "color-play",
+    "image": "assets/images/brown.webp",
+    "audio": "assets/audio/brown.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "rainbow",
+    "text": "rainbow",
+    "topic": "color-play",
+    "image": "assets/images/rainbow.webp",
+    "audio": "assets/audio/rainbow.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "ladybug",
+    "text": "ladybug",
+    "topic": "little-outdoors",
+    "image": "assets/images/ladybug.webp",
+    "audio": "assets/audio/ladybug.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "snail",
+    "text": "snail",
+    "topic": "little-outdoors",
+    "image": "assets/images/snail.webp",
+    "audio": "assets/audio/snail.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "cup",
+    "text": "cup",
+    "topic": "my-world",
+    "image": "assets/images/cup.webp",
+    "audio": "assets/audio/cup.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "milk",
+    "text": "milk",
+    "topic": "my-world",
+    "image": "assets/images/milk.webp",
+    "audio": "assets/audio/milk.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "castle",
+    "text": "castle",
+    "topic": "imagination",
+    "image": "assets/images/castle.webp",
+    "audio": "assets/audio/castle.mp3",
+    "color": "lavender"
+  },
+  {
+    "id": "treasure",
+    "text": "treasure",
+    "topic": "imagination",
+    "image": "assets/images/treasure.webp",
+    "audio": "assets/audio/treasure.mp3",
+    "color": "rose"
+  },
+  {
+    "id": "carrot",
+    "text": "carrot",
+    "topic": "vegetable-shop",
+    "image": "assets/images/carrot.webp",
+    "audio": "assets/audio/carrot.mp3",
+    "color": "butter"
+  },
+  {
+    "id": "bucket",
+    "text": "bucket",
+    "topic": "playground-fun",
+    "image": "assets/images/bucket.webp",
+    "audio": "assets/audio/bucket.mp3",
+    "color": "mint"
+  },
+  {
+    "id": "cow",
+    "text": "cow",
+    "topic": "animal-friends",
+    "image": "assets/images/cow.webp",
+    "audio": "assets/audio/cow.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "horse",
+    "text": "horse",
+    "topic": "animal-friends",
+    "image": "assets/images/horse.webp",
+    "audio": "assets/audio/horse.mp3",
+    "color": "lavender"
+  }
+]

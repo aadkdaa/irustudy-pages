@@ -1,0 +1,551 @@
+[
+  {
+    "id": 1,
+    "newCandidates": [
+      "cat",
+      "dog",
+      "pig",
+      "duck"
+    ],
+    "reviewCandidates": []
+  },
+  {
+    "id": 2,
+    "newCandidates": [
+      "rabbit",
+      "bear"
+    ],
+    "reviewCandidates": [
+      "cat",
+      "dog"
+    ]
+  },
+  {
+    "id": 3,
+    "newCandidates": [
+      "ball",
+      "fish"
+    ],
+    "reviewCandidates": [
+      "rabbit",
+      "pig"
+    ]
+  },
+  {
+    "id": 4,
+    "newCandidates": [
+      "apple",
+      "banana"
+    ],
+    "reviewCandidates": [
+      "ball",
+      "duck"
+    ]
+  },
+  {
+    "id": 5,
+    "newCandidates": [
+      "car",
+      "bus"
+    ],
+    "reviewCandidates": [
+      "apple",
+      "cat"
+    ]
+  },
+  {
+    "id": 6,
+    "newCandidates": [
+      "jump",
+      "run"
+    ],
+    "reviewCandidates": [
+      "car",
+      "dog"
+    ]
+  },
+  {
+    "id": 7,
+    "newCandidates": [
+      "red",
+      "blue"
+    ],
+    "reviewCandidates": [
+      "jump",
+      "bear"
+    ]
+  },
+  {
+    "id": 8,
+    "newCandidates": [
+      "sun",
+      "moon"
+    ],
+    "reviewCandidates": [
+      "red",
+      "pig"
+    ]
+  },
+  {
+    "id": 9,
+    "newCandidates": [
+      "mother",
+      "father"
+    ],
+    "reviewCandidates": [
+      "sun",
+      "rabbit"
+    ]
+  },
+  {
+    "id": 10,
+    "newCandidates": [
+      "dinosaur",
+      "dragon"
+    ],
+    "reviewCandidates": [
+      "mother",
+      "fish"
+    ]
+  },
+  {
+    "id": 11,
+    "newCandidates": [
+      "slide",
+      "swing"
+    ],
+    "reviewCandidates": [
+      "dinosaur",
+      "duck"
+    ]
+  },
+  {
+    "id": 12,
+    "newCandidates": [
+      "monkey",
+      "elephant"
+    ],
+    "reviewCandidates": [
+      "slide",
+      "ball"
+    ]
+  },
+  {
+    "id": 13,
+    "newCandidates": [
+      "robot",
+      "doll"
+    ],
+    "reviewCandidates": [
+      "monkey",
+      "banana"
+    ]
+  },
+  {
+    "id": 14,
+    "newCandidates": [
+      "strawberry",
+      "watermelon"
+    ],
+    "reviewCandidates": [
+      "robot",
+      "cat"
+    ]
+  },
+  {
+    "id": 15,
+    "newCandidates": [
+      "train",
+      "plane"
+    ],
+    "reviewCandidates": [
+      "strawberry",
+      "apple"
+    ]
+  },
+  {
+    "id": 16,
+    "newCandidates": [
+      "dance",
+      "clap"
+    ],
+    "reviewCandidates": [
+      "train",
+      "bus"
+    ]
+  },
+  {
+    "id": 17,
+    "newCandidates": [
+      "yellow",
+      "green"
+    ],
+    "reviewCandidates": [
+      "dance",
+      "dog"
+    ]
+  },
+  {
+    "id": 18,
+    "newCandidates": [
+      "star",
+      "cloud"
+    ],
+    "reviewCandidates": [
+      "yellow",
+      "car"
+    ]
+  },
+  {
+    "id": 19,
+    "newCandidates": [
+      "baby",
+      "family"
+    ],
+    "reviewCandidates": [
+      "star",
+      "run"
+    ]
+  },
+  {
+    "id": 20,
+    "newCandidates": [
+      "unicorn",
+      "monster"
+    ],
+    "reviewCandidates": [
+      "baby",
+      "bear"
+    ]
+  },
+  {
+    "id": 21,
+    "newCandidates": [
+      "frog",
+      "sandbox"
+    ],
+    "reviewCandidates": [
+      "unicorn",
+      "jump"
+    ]
+  },
+  {
+    "id": 22,
+    "newCandidates": [
+      "lion",
+      "giraffe"
+    ],
+    "reviewCandidates": [
+      "frog",
+      "blue"
+    ]
+  },
+  {
+    "id": 23,
+    "newCandidates": [
+      "kite",
+      "balloon"
+    ],
+    "reviewCandidates": [
+      "lion",
+      "pig"
+    ]
+  },
+  {
+    "id": 24,
+    "newCandidates": [
+      "grape",
+      "orange"
+    ],
+    "reviewCandidates": [
+      "kite",
+      "red"
+    ]
+  },
+  {
+    "id": 25,
+    "newCandidates": [
+      "boat",
+      "bike"
+    ],
+    "reviewCandidates": [
+      "grape",
+      "moon"
+    ]
+  },
+  {
+    "id": 26,
+    "newCandidates": [
+      "wave",
+      "kick"
+    ],
+    "reviewCandidates": [
+      "boat",
+      "rabbit"
+    ]
+  },
+  {
+    "id": 27,
+    "newCandidates": [
+      "pink",
+      "purple"
+    ],
+    "reviewCandidates": [
+      "wave",
+      "sun"
+    ]
+  },
+  {
+    "id": 28,
+    "newCandidates": [
+      "tree",
+      "flower"
+    ],
+    "reviewCandidates": [
+      "pink",
+      "father"
+    ]
+  },
+  {
+    "id": 29,
+    "newCandidates": [
+      "friend",
+      "book"
+    ],
+    "reviewCandidates": [
+      "tree",
+      "fish"
+    ]
+  },
+  {
+    "id": 30,
+    "newCandidates": [
+      "fairy",
+      "penguin"
+    ],
+    "reviewCandidates": [
+      "friend",
+      "mother"
+    ]
+  },
+  {
+    "id": 31,
+    "newCandidates": [
+      "trampoline",
+      "pool"
+    ],
+    "reviewCandidates": [
+      "fairy",
+      "dragon"
+    ]
+  },
+  {
+    "id": 32,
+    "newCandidates": [
+      "bubbles",
+      "drum"
+    ],
+    "reviewCandidates": [
+      "trampoline",
+      "duck"
+    ]
+  },
+  {
+    "id": 33,
+    "newCandidates": [
+      "ice-cream",
+      "cake"
+    ],
+    "reviewCandidates": [
+      "bubbles",
+      "dinosaur"
+    ]
+  },
+  {
+    "id": 34,
+    "newCandidates": [
+      "truck",
+      "turtle"
+    ],
+    "reviewCandidates": [
+      "ice-cream",
+      "swing"
+    ]
+  },
+  {
+    "id": 35,
+    "newCandidates": [
+      "throw",
+      "catch"
+    ],
+    "reviewCandidates": [
+      "truck",
+      "ball"
+    ]
+  },
+  {
+    "id": 36,
+    "newCandidates": [
+      "black",
+      "white"
+    ],
+    "reviewCandidates": [
+      "throw",
+      "slide"
+    ]
+  },
+  {
+    "id": 37,
+    "newCandidates": [
+      "butterfly",
+      "bee"
+    ],
+    "reviewCandidates": [
+      "black",
+      "elephant"
+    ]
+  },
+  {
+    "id": 38,
+    "newCandidates": [
+      "bed",
+      "chair"
+    ],
+    "reviewCandidates": [
+      "butterfly",
+      "banana"
+    ]
+  },
+  {
+    "id": 39,
+    "newCandidates": [
+      "pirate",
+      "superhero"
+    ],
+    "reviewCandidates": [
+      "bed",
+      "monkey"
+    ]
+  },
+  {
+    "id": 40,
+    "newCandidates": [
+      "water",
+      "sand"
+    ],
+    "reviewCandidates": [
+      "pirate",
+      "doll"
+    ]
+  },
+  {
+    "id": 41,
+    "newCandidates": [
+      "puzzle",
+      "pizza"
+    ],
+    "reviewCandidates": [
+      "water",
+      "cat"
+    ]
+  },
+  {
+    "id": 42,
+    "newCandidates": [
+      "cookie",
+      "juice"
+    ],
+    "reviewCandidates": [
+      "puzzle",
+      "robot"
+    ]
+  },
+  {
+    "id": 43,
+    "newCandidates": [
+      "tiger",
+      "rocket"
+    ],
+    "reviewCandidates": [
+      "cookie",
+      "watermelon"
+    ]
+  },
+  {
+    "id": 44,
+    "newCandidates": [
+      "roll",
+      "hide"
+    ],
+    "reviewCandidates": [
+      "tiger",
+      "apple"
+    ]
+  },
+  {
+    "id": 45,
+    "newCandidates": [
+      "brown",
+      "rainbow"
+    ],
+    "reviewCandidates": [
+      "roll",
+      "strawberry"
+    ]
+  },
+  {
+    "id": 46,
+    "newCandidates": [
+      "ladybug",
+      "snail"
+    ],
+    "reviewCandidates": [
+      "brown",
+      "plane"
+    ]
+  },
+  {
+    "id": 47,
+    "newCandidates": [
+      "cup",
+      "milk"
+    ],
+    "reviewCandidates": [
+      "ladybug",
+      "bus"
+    ]
+  },
+  {
+    "id": 48,
+    "newCandidates": [
+      "castle",
+      "treasure"
+    ],
+    "reviewCandidates": [
+      "cup",
+      "train"
+    ]
+  },
+  {
+    "id": 49,
+    "newCandidates": [
+      "carrot",
+      "bucket"
+    ],
+    "reviewCandidates": [
+      "castle",
+      "clap"
+    ]
+  },
+  {
+    "id": 50,
+    "newCandidates": [
+      "cow",
+      "horse"
+    ],
+    "reviewCandidates": [
+      "carrot",
+      "dog"
+    ]
+  }
+]

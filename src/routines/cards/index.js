@@ -1,4 +1,5 @@
 import { makeRounds } from './plan.js';
+import { introduceWord } from './intro.js';
 import { element, button, picture } from '../../ui/elements.js';
 
 export function createCardRoutine({ container, words, config, audio, onComplete }) {
@@ -8,8 +9,10 @@ export function createCardRoutine({ container, words, config, audio, onComplete 
   let destroyed = false;
   let generation = 0;
   let finished = false;
+  let intro;
 
   function render() {
+    intro?.cancel();
     const token = ++generation;
     const round = rounds[roundIndex];
     const word = round.words[wordIndex];
@@ -21,12 +24,24 @@ export function createCardRoutine({ container, words, config, audio, onComplete 
     prompt.tabIndex = -1;
     toolbar.append(prompt);
     const card = element('article', 'word-card');
-    card.append(picture(word), element('h2', 'word-text', word.text));
+    const illustration = element('div', 'card-picture-area');
+    illustration.append(picture(word));
+    const spelling = element('div', 'card-word-area');
+    const wordText = element('h2', 'word-text', word.text);
+    if (word.text.length > 7) wordText.classList.add('long-word');
+    wordText.lang = 'en';
+    spelling.append(wordText);
+    card.append(illustration, spelling);
+    if (round.showMeaning) {
+      const meaning = element('div', 'card-meaning-area');
+      meaning.append(element('p', 'word-meaning', word.meaningKo));
+      illustration.append(meaning);
+    }
     const feedback = element('p', 'audio-feedback');
     feedback.setAttribute('role', 'status');
     const actions = element('div', 'card-actions');
     let confirmed = !challenge;
-    let busy = false;
+    let busy = true;
     function advance() {
       if (!confirmed || busy || destroyed || finished) return;
       wordIndex++;
@@ -71,13 +86,23 @@ export function createCardRoutine({ container, words, config, audio, onComplete 
     screen.append(toolbar, card, feedback, actions);
     container.replaceChildren(screen);
     prompt.focus({ preventScroll: true });
-    if (!challenge) listen(false);
+    sound.disabled = true;
+    next.disabled = true;
+    intro = introduceWord(screen, wordText, config.wordIntro);
+    intro.finished.then(ready => {
+      if (destroyed || token !== generation) return;
+      busy = false;
+      sound.disabled = false;
+      next.disabled = !confirmed;
+      if (ready && !challenge) listen(false);
+    });
   }
   return {
     start: render,
     destroy() {
       destroyed = true;
       generation++;
+      intro?.cancel();
       audio.stop();
       container.replaceChildren();
     },

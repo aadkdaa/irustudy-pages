@@ -1,4 +1,6 @@
 export const STORAGE_KEY = 'irustudy.progress.v1';
+export const RECOVERY_BACKUP_KEY = `${STORAGE_KEY}.recovery-backup`;
+export class InvalidProgressError extends Error {}
 
 export function dateKey(now, timeZone) {
   const parts = new Intl.DateTimeFormat('en-US', {
@@ -14,13 +16,30 @@ export function initialProgress(stages) {
 export function loadProgress(storage, stages) {
   const raw = storage.getItem(STORAGE_KEY);
   if (!raw) return initialProgress(stages);
-  const value = JSON.parse(raw);
-  if (value.schemaVersion !== 1 || !stages.some(stage => stage.id === value.currentStage) ||
+  let value;
+  try { value = JSON.parse(raw); }
+  catch { throw new InvalidProgressError('Saved progress requires review'); }
+  if (!value || value.schemaVersion !== 1 || !stages.some(stage => stage.id === value.currentStage) ||
     !Number.isInteger(value.completedDays) || value.completedDays < 0 || !Array.isArray(value.history) ||
-    value.history.some(item => !/^\d{4}-\d{2}-\d{2}$/.test(item.date) || !Number.isInteger(item.stageId))) {
-    throw new Error('Saved progress requires review');
+    value.history.some(item => !item || !/^\d{4}-\d{2}-\d{2}$/.test(item.date) || !Number.isInteger(item.stageId))) {
+    throw new InvalidProgressError('Saved progress requires review');
   }
   return value;
+}
+
+export function recoverProgress(storage, stageId, stages) {
+  const fresh = changeStage(initialProgress(stages), stageId, stages);
+  let latest;
+  try { latest = loadProgress(storage, stages); }
+  catch (error) {
+    if (!(error instanceof InvalidProgressError)) throw error;
+    const raw = storage.getItem(STORAGE_KEY);
+    // Preserve the unreadable record before replacing it. A failed backup aborts recovery.
+    storage.setItem(RECOVERY_BACKUP_KEY, raw);
+  }
+  const next = latest ? changeStage(latest, stageId, stages) : fresh;
+  storage.setItem(STORAGE_KEY, JSON.stringify(next));
+  return next;
 }
 
 export function recordCompletion(progress, { stageId, date, wordIds }, stages, requiredDays) {

@@ -1,7 +1,12 @@
 .learning-screen { max-width: 790px; padding: 25px 0 20px; }
 .learning-toolbar { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 24px; }
 .learning-prompt { font-size: clamp(18px, 2.3vw, 25px); font-weight: 600; letter-spacing: -.04em; margin: 0; text-align: center; }
-.word-card { background: #fffdf8; border: 1px solid #e2e1d6; border-radius: 32px; padding: 18px 18px 12px; width: min(100%, 440px); margin: auto; box-shadow: 0 8px 0 #e8e6dc; }
+.word-card { background: #fffdf8; border: 1px solid #e4dfd3; border-radius: 24px; padding: 24px 30px 28px; width: min(100%, 480px); margin: auto; box-shadow: 0 12px 32px #443b2810; display: grid; gap: 0; }
+.card-picture-area { padding-bottom: 18px; margin-bottom: 20px; border-bottom: 1px solid #e5dfd2; }
+.word-card .card-picture-area .word-picture { height: clamp(130px, 22vh, 190px); background: transparent; border-radius: 0; }
+.card-word-area, .card-meaning-area { padding: 4px 0; }
+
+
 .word-picture { background: #eee2d8; border-radius: 21px; height: clamp(180px, 28vh, 285px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; overflow: hidden; }
 .word-picture[data-tone="peach"] { background: #f3dfcc; color: #ae7957; }
 .word-picture[data-tone="lavender"] { background: #e5e0f2; color: #9184b1; }
@@ -13,7 +18,14 @@
 .picture-placeholder::before { content: ""; position: absolute; width: 32px; height: 32px; border: 2px solid currentColor; border-radius: 7px; transform: rotate(45deg); bottom: -17px; left: 5px; box-shadow: 25px -12px 0 -3px currentColor; }
 .picture-placeholder::after { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; background: currentColor; top: 12px; left: 14px; }
 .placeholder-label { font-size: 12px; letter-spacing: .06em; opacity: .8; }
-.word-text { font: 64px Georgia, "Times New Roman", serif; text-align: center; margin: 16px 0 12px; letter-spacing: -.04em; color: #364330; }
+.word-text, .word-meaning { font: 700 clamp(38px, 6.5vw, 54px)/1.35 'Gowun Dodum', sans-serif; text-align: center; margin: 0; letter-spacing: 0; color: #303b32; word-break: keep-all; overflow-wrap: anywhere; }
+.word-meaning { font-size: clamp(19px, 3.25vw, 27px); }
+.word-text { font-family: 'Nunito', sans-serif; font-size: clamp(52px, 10vw, 88px); font-weight: 800; line-height: 1.15; color: #263e25; }
+.card-word-area { padding: 18px 0; }
+.word-text.long-word { font-size: clamp(38px, 6.8vw, 60px); }
+.word-text { width: fit-content; max-width: 100%; margin-inline: auto; position: relative; z-index: 1; }
+.word-intro .card-picture-area, .word-intro .learning-toolbar, .word-intro .card-actions, .word-intro .audio-feedback { visibility: hidden; }
+.word-intro .word-card { background: transparent; border-color: transparent; box-shadow: none; }
 .audio-feedback { min-height: 22px; text-align: center; font-size: 13px; color: #7a8076; margin: 18px 0 10px; }
 .card-actions { display: flex; gap: 16px; width: min(100%, 440px); margin: auto; }
 .card-actions .button { flex: 1; padding: 16px 12px; }
@@ -26,8 +38,11 @@
   .learning-screen { padding-top: 20px; }
   .learning-toolbar { margin-bottom: 18px; gap: 4px; }
   .learning-prompt { font-size: 18px; }
-  .word-card { max-width: 360px; padding: 12px; border-radius: 25px; }
-  .word-text { font-size: 56px; }
+  .word-card { max-width: 400px; padding: 18px 20px 22px; border-radius: 22px; }
+  .word-text, .word-meaning { font-size: clamp(32px, 8vw, 46px); }
+  .word-meaning { font-size: clamp(16px, 4vw, 23px); }
+  .word-text { font-size: clamp(48px, 13vw, 76px); }
+  .word-text.long-word { font-size: clamp(30px, 8vw, 46px); }
   .card-actions { max-width: 360px; gap: 12px; }
   .card-actions .button { font-size: 17px; }
   .word-picture.small { height: 90px; }

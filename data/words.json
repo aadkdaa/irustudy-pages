@@ -2,6 +2,7 @@
   {
     "id": "cat",
     "text": "cat",
+    "meaningKo": "고양이",
     "topic": "animal-friends",
     "image": "assets/images/cat.webp",
     "audio": "assets/audio/cat.mp3",
@@ -10,6 +11,7 @@
   {
     "id": "dog",
     "text": "dog",
+    "meaningKo": "개",
     "topic": "animal-friends",
     "image": "assets/images/dog.webp",
     "audio": "assets/audio/dog.mp3",
@@ -18,6 +20,7 @@
   {
     "id": "pig",
     "text": "pig",
+    "meaningKo": "돼지",
     "topic": "animal-friends",
     "image": "assets/images/pig.webp",
     "audio": "assets/audio/pig.mp3",
@@ -26,6 +29,7 @@
   {
     "id": "duck",
     "text": "duck",
+    "meaningKo": "오리",
     "topic": "animal-friends",
     "image": "assets/images/duck.webp",
     "audio": "assets/audio/duck.mp3",
@@ -34,6 +38,7 @@
   {
     "id": "rabbit",
     "text": "rabbit",
+    "meaningKo": "토끼",
     "topic": "animal-friends",
     "image": "assets/images/rabbit.webp",
     "audio": "assets/audio/rabbit.mp3",
@@ -42,6 +47,7 @@
   {
     "id": "bear",
     "text": "bear",
+    "meaningKo": "곰",
     "topic": "animal-friends",
     "image": "assets/images/bear.webp",
     "audio": "assets/audio/bear.mp3",
@@ -50,6 +56,7 @@
   {
     "id": "ball",
     "text": "ball",
+    "meaningKo": "공",
     "topic": "favorite-toys",
     "image": "assets/images/ball.webp",
     "audio": "assets/audio/ball.mp3",
@@ -58,6 +65,7 @@
   {
     "id": "fish",
     "text": "fish",
+    "meaningKo": "물고기",
     "topic": "under-the-sea",
     "image": "assets/images/fish.webp",
     "audio": "assets/audio/fish.mp3",
@@ -66,6 +74,7 @@
   {
     "id": "apple",
     "text": "apple",
+    "meaningKo": "사과",
     "topic": "favorite-treats",
     "image": "assets/images/apple.webp",
     "audio": "assets/audio/apple.mp3",
@@ -74,6 +83,7 @@
   {
     "id": "banana",
     "text": "banana",
+    "meaningKo": "바나나",
     "topic": "favorite-treats",
     "image": "assets/images/banana.webp",
     "audio": "assets/audio/banana.mp3",
@@ -82,6 +92,7 @@
   {
     "id": "car",
     "text": "car",
+    "meaningKo": "자동차",
     "topic": "rides",
     "image": "assets/images/car.webp",
     "audio": "assets/audio/car.mp3",
@@ -90,6 +101,7 @@
   {
     "id": "bus",
     "text": "bus",
+    "meaningKo": "버스",
     "topic": "rides",
     "image": "assets/images/bus.webp",
     "audio": "assets/audio/bus.mp3",
@@ -98,6 +110,7 @@
   {
     "id": "jump",
     "text": "jump",
+    "meaningKo": "점프하다",
     "topic": "move-and-play",
     "image": "assets/images/jump.webp",
     "audio": "assets/audio/jump.mp3",
@@ -106,6 +119,7 @@
   {
     "id": "run",
     "text": "run",
+    "meaningKo": "달리다",
     "topic": "move-and-play",
     "image": "assets/images/run.webp",
     "audio": "assets/audio/run.mp3",
@@ -114,6 +128,7 @@
   {
     "id": "red",
     "text": "red",
+    "meaningKo": "빨강",
     "topic": "color-play",
     "image": "assets/images/red.webp",
     "audio": "assets/audio/red.mp3",
@@ -122,6 +137,7 @@
   {
     "id": "blue",
     "text": "blue",
+    "meaningKo": "파랑",
     "topic": "color-play",
     "image": "assets/images/blue.webp",
     "audio": "assets/audio/blue.mp3",
@@ -130,6 +146,7 @@
   {
     "id": "sun",
     "text": "sun",
+    "meaningKo": "해",
     "topic": "little-outdoors",
     "image": "assets/images/sun.webp",
     "audio": "assets/audio/sun.mp3",
@@ -138,6 +155,7 @@
   {
     "id": "moon",
     "text": "moon",
+    "meaningKo": "달",
     "topic": "little-outdoors",
     "image": "assets/images/moon.webp",
     "audio": "assets/audio/moon.mp3",
@@ -146,6 +164,7 @@
   {
     "id": "mother",
     "text": "mom",
+    "meaningKo": "엄마",
     "topic": "my-world",
     "image": "assets/images/mother.webp",
     "audio": "assets/audio/mother.mp3",
@@ -154,6 +173,7 @@
   {
     "id": "father",
     "text": "dad",
+    "meaningKo": "아빠",
     "topic": "my-world",
     "image": "assets/images/father.webp",
     "audio": "assets/audio/father.mp3",
@@ -162,6 +182,7 @@
   {
     "id": "dinosaur",
     "text": "dinosaur",
+    "meaningKo": "공룡",
     "topic": "imagination",
     "image": "assets/images/dinosaur.webp",
     "audio": "assets/audio/dinosaur.mp3",
@@ -170,6 +191,7 @@
   {
     "id": "dragon",
     "text": "dragon",
+    "meaningKo": "용",
     "topic": "imagination",
     "image": "assets/images/dragon.webp",
     "audio": "assets/audio/dragon.mp3",
@@ -178,6 +200,7 @@
   {
     "id": "slide",
     "text": "slide",
+    "meaningKo": "미끄럼틀",
     "topic": "playground-fun",
     "image": "assets/images/slide.webp",
     "audio": "assets/audio/slide.mp3",
@@ -186,6 +209,7 @@
   {
     "id": "swing",
     "text": "swing",
+    "meaningKo": "그네",
     "topic": "playground-fun",
     "image": "assets/images/swing.webp",
     "audio": "assets/audio/swing.mp3",
@@ -194,6 +218,7 @@
   {
     "id": "monkey",
     "text": "monkey",
+    "meaningKo": "원숭이",
     "topic": "animal-friends",
     "image": "assets/images/monkey.webp",
     "audio": "assets/audio/monkey.mp3",
@@ -202,6 +227,7 @@
   {
     "id": "elephant",
     "text": "elephant",
+    "meaningKo": "코끼리",
     "topic": "animal-friends",
     "image": "assets/images/elephant.webp",
     "audio": "assets/audio/elephant.mp3",
@@ -210,6 +236,7 @@
   {
     "id": "robot",
     "text": "robot",
+    "meaningKo": "로봇",
     "topic": "favorite-toys",
     "image": "assets/images/robot.webp",
     "audio": "assets/audio/robot.mp3",
@@ -218,6 +245,7 @@
   {
     "id": "doll",
     "text": "doll",
+    "meaningKo": "인형",
     "topic": "favorite-toys",
     "image": "assets/images/doll.webp",
     "audio": "assets/audio/doll.mp3",
@@ -226,6 +254,7 @@
   {
     "id": "strawberry",
     "text": "strawberry",
+    "meaningKo": "딸기",
     "topic": "favorite-treats",
     "image": "assets/images/strawberry.webp",
     "audio": "assets/audio/strawberry.mp3",
@@ -234,6 +263,7 @@
   {
     "id": "watermelon",
     "text": "watermelon",
+    "meaningKo": "수박",
     "topic": "favorite-treats",
     "image": "assets/images/watermelon.webp",
     "audio": "assets/audio/watermelon.mp3",
@@ -242,6 +272,7 @@
   {
     "id": "train",
     "text": "train",
+    "meaningKo": "기차",
     "topic": "rides",
     "image": "assets/images/train.webp",
     "audio": "assets/audio/train.mp3",
@@ -250,6 +281,7 @@
   {
     "id": "plane",
     "text": "plane",
+    "meaningKo": "비행기",
     "topic": "rides",
     "image": "assets/images/plane.webp",
     "audio": "assets/audio/plane.mp3",
@@ -258,6 +290,7 @@
   {
     "id": "dance",
     "text": "dance",
+    "meaningKo": "춤추다",
     "topic": "move-and-play",
     "image": "assets/images/dance.webp",
     "audio": "assets/audio/dance.mp3",
@@ -266,6 +299,7 @@
   {
     "id": "clap",
     "text": "clap",
+    "meaningKo": "박수 치다",
     "topic": "move-and-play",
     "image": "assets/images/clap.webp",
     "audio": "assets/audio/clap.mp3",
@@ -274,6 +308,7 @@
   {
     "id": "yellow",
     "text": "yellow",
+    "meaningKo": "노랑",
     "topic": "color-play",
     "image": "assets/images/yellow.webp",
     "audio": "assets/audio/yellow.mp3",
@@ -282,6 +317,7 @@
   {
     "id": "green",
     "text": "green",
+    "meaningKo": "초록",
     "topic": "color-play",
     "image": "assets/images/green.webp",
     "audio": "assets/audio/green.mp3",
@@ -290,6 +326,7 @@
   {
     "id": "star",
     "text": "star",
+    "meaningKo": "별",
     "topic": "little-outdoors",
     "image": "assets/images/star.webp",
     "audio": "assets/audio/star.mp3",
@@ -298,6 +335,7 @@
   {
     "id": "cloud",
     "text": "cloud",
+    "meaningKo": "구름",
     "topic": "little-outdoors",
     "image": "assets/images/cloud.webp",
     "audio": "assets/audio/cloud.mp3",
@@ -306,6 +344,7 @@
   {
     "id": "baby",
     "text": "baby",
+    "meaningKo": "아기",
     "topic": "my-world",
     "image": "assets/images/baby.webp",
     "audio": "assets/audio/baby.mp3",
@@ -314,6 +353,7 @@
   {
     "id": "family",
     "text": "family",
+    "meaningKo": "가족",
     "topic": "my-world",
     "image": "assets/images/family.webp",
     "audio": "assets/audio/family.mp3",
@@ -322,6 +362,7 @@
   {
     "id": "unicorn",
     "text": "unicorn",
+    "meaningKo": "유니콘",
     "topic": "imagination",
     "image": "assets/images/unicorn.webp",
     "audio": "assets/audio/unicorn.mp3",
@@ -330,6 +371,7 @@
   {
     "id": "monster",
     "text": "monster",
+    "meaningKo": "괴물",
     "topic": "imagination",
     "image": "assets/images/monster.webp",
     "audio": "assets/audio/monster.mp3",
@@ -338,6 +380,7 @@
   {
     "id": "frog",
     "text": "frog",
+    "meaningKo": "개구리",
     "topic": "friendly-animals",
     "image": "assets/images/frog.webp",
     "audio": "assets/audio/frog.mp3",
@@ -346,6 +389,7 @@
   {
     "id": "sandbox",
     "text": "sandbox",
+    "meaningKo": "모래 놀이터",
     "topic": "playground-fun",
     "image": "assets/images/sandbox.webp",
     "audio": "assets/audio/sandbox.mp3",
@@ -354,6 +398,7 @@
   {
     "id": "lion",
     "text": "lion",
+    "meaningKo": "사자",
     "topic": "animal-friends",
     "image": "assets/images/lion.webp",
     "audio": "assets/audio/lion.mp3",
@@ -362,6 +407,7 @@
   {
     "id": "giraffe",
     "text": "giraffe",
+    "meaningKo": "기린",
     "topic": "animal-friends",
     "image": "assets/images/giraffe.webp",
     "audio": "assets/audio/giraffe.mp3",
@@ -370,6 +416,7 @@
   {
     "id": "kite",
     "text": "kite",
+    "meaningKo": "연",
     "topic": "favorite-toys",
     "image": "assets/images/kite.webp",
     "audio": "assets/audio/kite.mp3",
@@ -378,6 +425,7 @@
   {
     "id": "balloon",
     "text": "balloon",
+    "meaningKo": "풍선",
     "topic": "favorite-toys",
     "image": "assets/images/balloon.webp",
     "audio": "assets/audio/balloon.mp3",
@@ -386,6 +434,7 @@
   {
     "id": "grape",
     "text": "grapes",
+    "meaningKo": "포도",
     "topic": "favorite-treats",
     "image": "assets/images/grape.webp",
     "audio": "assets/audio/grape.mp3",
@@ -394,6 +443,7 @@
   {
     "id": "orange",
     "text": "orange",
+    "meaningKo": "오렌지",
     "topic": "favorite-treats",
     "image": "assets/images/orange.webp",
     "audio": "assets/audio/orange.mp3",
@@ -402,6 +452,7 @@
   {
     "id": "boat",
     "text": "boat",
+    "meaningKo": "배",
     "topic": "rides",
     "image": "assets/images/boat.webp",
     "audio": "assets/audio/boat.mp3",
@@ -410,6 +461,7 @@
   {
     "id": "bike",
     "text": "bicycle",
+    "meaningKo": "자전거",
     "topic": "rides",
     "image": "assets/images/bike.webp",
     "audio": "assets/audio/bike.mp3",
@@ -418,6 +470,7 @@
   {
     "id": "wave",
     "text": "wave",
+    "meaningKo": "파도",
     "topic": "little-outdoors",
     "image": "assets/images/wave.webp",
     "audio": "assets/audio/wave.mp3",
@@ -426,6 +479,7 @@
   {
     "id": "kick",
     "text": "kick",
+    "meaningKo": "발로 차다",
     "topic": "move-and-play",
     "image": "assets/images/kick.webp",
     "audio": "assets/audio/kick.mp3",
@@ -434,6 +488,7 @@
   {
     "id": "pink",
     "text": "pink",
+    "meaningKo": "분홍",
     "topic": "color-play",
     "image": "assets/images/pink.webp",
     "audio": "assets/audio/pink.mp3",
@@ -442,6 +497,7 @@
   {
     "id": "purple",
     "text": "purple",
+    "meaningKo": "보라",
     "topic": "color-play",
     "image": "assets/images/purple.webp",
     "audio": "assets/audio/purple.mp3",
@@ -450,6 +506,7 @@
   {
     "id": "tree",
     "text": "tree",
+    "meaningKo": "나무",
     "topic": "little-outdoors",
     "image": "assets/images/tree.webp",
     "audio": "assets/audio/tree.mp3",
@@ -458,6 +515,7 @@
   {
     "id": "flower",
     "text": "flower",
+    "meaningKo": "꽃",
     "topic": "little-outdoors",
     "image": "assets/images/flower.webp",
     "audio": "assets/audio/flower.mp3",
@@ -466,6 +524,7 @@
   {
     "id": "friend",
     "text": "friend",
+    "meaningKo": "친구",
     "topic": "my-world",
     "image": "assets/images/friend.webp",
     "audio": "assets/audio/friend.mp3",
@@ -474,6 +533,7 @@
   {
     "id": "book",
     "text": "book",
+    "meaningKo": "책",
     "topic": "my-world",
     "image": "assets/images/book.webp",
     "audio": "assets/audio/book.mp3",
@@ -482,6 +542,7 @@
   {
     "id": "fairy",
     "text": "fairy",
+    "meaningKo": "요정",
     "topic": "imagination",
     "image": "assets/images/fairy.webp",
     "audio": "assets/audio/fairy.mp3",
@@ -490,6 +551,7 @@
   {
     "id": "penguin",
     "text": "penguin",
+    "meaningKo": "펭귄",
     "topic": "zoo-friends",
     "image": "assets/images/penguin.webp",
     "audio": "assets/audio/penguin.mp3",
@@ -498,6 +560,7 @@
   {
     "id": "trampoline",
     "text": "trampoline",
+    "meaningKo": "트램펄린",
     "topic": "playground-fun",
     "image": "assets/images/trampoline.webp",
     "audio": "assets/audio/trampoline.mp3",
@@ -506,6 +569,7 @@
   {
     "id": "pool",
     "text": "pool",
+    "meaningKo": "수영장",
     "topic": "playground-fun",
     "image": "assets/images/pool.webp",
     "audio": "assets/audio/pool.mp3",
@@ -514,6 +578,7 @@
   {
     "id": "bubbles",
     "text": "bubbles",
+    "meaningKo": "비눗방울",
     "topic": "favorite-toys",
     "image": "assets/images/bubbles.webp",
     "audio": "assets/audio/bubbles.mp3",
@@ -522,6 +587,7 @@
   {
     "id": "drum",
     "text": "drum",
+    "meaningKo": "북",
     "topic": "music",
     "image": "assets/images/drum.webp",
     "audio": "assets/audio/drum.mp3",
@@ -530,6 +596,7 @@
   {
     "id": "ice-cream",
     "text": "ice cream",
+    "meaningKo": "아이스크림",
     "topic": "favorite-treats",
     "image": "assets/images/ice-cream.webp",
     "audio": "assets/audio/ice-cream.mp3",
@@ -538,6 +605,7 @@
   {
     "id": "cake",
     "text": "cake",
+    "meaningKo": "케이크",
     "topic": "favorite-treats",
     "image": "assets/images/cake.webp",
     "audio": "assets/audio/cake.mp3",
@@ -546,6 +614,7 @@
   {
     "id": "truck",
     "text": "truck",
+    "meaningKo": "트럭",
     "topic": "rides",
     "image": "assets/images/truck.webp",
     "audio": "assets/audio/truck.mp3",
@@ -554,6 +623,7 @@
   {
     "id": "turtle",
     "text": "turtle",
+    "meaningKo": "거북",
     "topic": "friendly-animals",
     "image": "assets/images/turtle.webp",
     "audio": "assets/audio/turtle.mp3",
@@ -562,6 +632,7 @@
   {
     "id": "throw",
     "text": "throw",
+    "meaningKo": "던지다",
     "topic": "move-and-play",
     "image": "assets/images/throw.webp",
     "audio": "assets/audio/throw.mp3",
@@ -570,6 +641,7 @@
   {
     "id": "catch",
     "text": "catch",
+    "meaningKo": "받아 잡다",
     "topic": "move-and-play",
     "image": "assets/images/catch.webp",
     "audio": "assets/audio/catch.mp3",
@@ -578,6 +650,7 @@
   {
     "id": "black",
     "text": "black",
+    "meaningKo": "검정",
     "topic": "color-play",
     "image": "assets/images/black.webp",
     "audio": "assets/audio/black.mp3",
@@ -586,6 +659,7 @@
   {
     "id": "white",
     "text": "white",
+    "meaningKo": "하양",
     "topic": "color-play",
     "image": "assets/images/white.webp",
     "audio": "assets/audio/white.mp3",
@@ -594,6 +668,7 @@
   {
     "id": "butterfly",
     "text": "butterfly",
+    "meaningKo": "나비",
     "topic": "little-outdoors",
     "image": "assets/images/butterfly.webp",
     "audio": "assets/audio/butterfly.mp3",
@@ -602,6 +677,7 @@
   {
     "id": "bee",
     "text": "bee",
+    "meaningKo": "벌",
     "topic": "little-outdoors",
     "image": "assets/images/bee.webp",
     "audio": "assets/audio/bee.mp3",
@@ -610,6 +686,7 @@
   {
     "id": "bed",
     "text": "bed",
+    "meaningKo": "침대",
     "topic": "my-world",
     "image": "assets/images/bed.webp",
     "audio": "assets/audio/bed.mp3",
@@ -618,6 +695,7 @@
   {
     "id": "chair",
     "text": "chair",
+    "meaningKo": "의자",
     "topic": "my-world",
     "image": "assets/images/chair.webp",
     "audio": "assets/audio/chair.mp3",
@@ -626,6 +704,7 @@
   {
     "id": "pirate",
     "text": "pirate",
+    "meaningKo": "해적",
     "topic": "imagination",
     "image": "assets/images/pirate.webp",
     "audio": "assets/audio/pirate.mp3",
@@ -634,6 +713,7 @@
   {
     "id": "superhero",
     "text": "superhero",
+    "meaningKo": "슈퍼히어로",
     "topic": "imagination",
     "image": "assets/images/superhero.webp",
     "audio": "assets/audio/superhero.mp3",
@@ -642,6 +722,7 @@
   {
     "id": "water",
     "text": "water",
+    "meaningKo": "물",
     "topic": "playground-fun",
     "image": "assets/images/water.webp",
     "audio": "assets/audio/water.mp3",
@@ -650,6 +731,7 @@
   {
     "id": "sand",
     "text": "sand",
+    "meaningKo": "모래",
     "topic": "playground-fun",
     "image": "assets/images/sand.webp",
     "audio": "assets/audio/sand.mp3",
@@ -658,6 +740,7 @@
   {
     "id": "puzzle",
     "text": "puzzle",
+    "meaningKo": "퍼즐",
     "topic": "favorite-toys",
     "image": "assets/images/puzzle.webp",
     "audio": "assets/audio/puzzle.mp3",
@@ -666,6 +749,7 @@
   {
     "id": "pizza",
     "text": "pizza",
+    "meaningKo": "피자",
     "topic": "snack-time",
     "image": "assets/images/pizza.webp",
     "audio": "assets/audio/pizza.mp3",
@@ -674,6 +758,7 @@
   {
     "id": "cookie",
     "text": "cookie",
+    "meaningKo": "쿠키",
     "topic": "favorite-treats",
     "image": "assets/images/cookie.webp",
     "audio": "assets/audio/cookie.mp3",
@@ -682,6 +767,7 @@
   {
     "id": "juice",
     "text": "juice",
+    "meaningKo": "주스",
     "topic": "favorite-treats",
     "image": "assets/images/juice.webp",
     "audio": "assets/audio/juice.mp3",
@@ -690,6 +776,7 @@
   {
     "id": "tiger",
     "text": "tiger",
+    "meaningKo": "호랑이",
     "topic": "zoo-friends",
     "image": "assets/images/tiger.webp",
     "audio": "assets/audio/tiger.mp3",
@@ -698,6 +785,7 @@
   {
     "id": "rocket",
     "text": "rocket",
+    "meaningKo": "로켓",
     "topic": "rides",
     "image": "assets/images/rocket.webp",
     "audio": "assets/audio/rocket.mp3",
@@ -706,6 +794,7 @@
   {
     "id": "roll",
     "text": "roll",
+    "meaningKo": "굴리다",
     "topic": "move-and-play",
     "image": "assets/images/roll.webp",
     "audio": "assets/audio/roll.mp3",
@@ -714,6 +803,7 @@
   {
     "id": "hide",
     "text": "hide",
+    "meaningKo": "숨다",
     "topic": "move-and-play",
     "image": "assets/images/hide.webp",
     "audio": "assets/audio/hide.mp3",
@@ -722,6 +812,7 @@
   {
     "id": "brown",
     "text": "brown",
+    "meaningKo": "갈색",
     "topic": "color-play",
     "image": "assets/images/brown.webp",
     "audio": "assets/audio/brown.mp3",
@@ -730,6 +821,7 @@
   {
     "id": "rainbow",
     "text": "rainbow",
+    "meaningKo": "무지개",
     "topic": "color-play",
     "image": "assets/images/rainbow.webp",
     "audio": "assets/audio/rainbow.mp3",
@@ -738,6 +830,7 @@
   {
     "id": "ladybug",
     "text": "ladybug",
+    "meaningKo": "무당벌레",
     "topic": "little-outdoors",
     "image": "assets/images/ladybug.webp",
     "audio": "assets/audio/ladybug.mp3",
@@ -746,6 +839,7 @@
   {
     "id": "snail",
     "text": "snail",
+    "meaningKo": "달팽이",
     "topic": "little-outdoors",
     "image": "assets/images/snail.webp",
     "audio": "assets/audio/snail.mp3",
@@ -754,6 +848,7 @@
   {
     "id": "cup",
     "text": "cup",
+    "meaningKo": "컵",
     "topic": "my-world",
     "image": "assets/images/cup.webp",
     "audio": "assets/audio/cup.mp3",
@@ -762,6 +857,7 @@
   {
     "id": "milk",
     "text": "milk",
+    "meaningKo": "우유",
     "topic": "my-world",
     "image": "assets/images/milk.webp",
     "audio": "assets/audio/milk.mp3",
@@ -770,6 +866,7 @@
   {
     "id": "castle",
     "text": "castle",
+    "meaningKo": "성",
     "topic": "imagination",
     "image": "assets/images/castle.webp",
     "audio": "assets/audio/castle.mp3",
@@ -778,6 +875,7 @@
   {
     "id": "treasure",
     "text": "treasure",
+    "meaningKo": "보물",
     "topic": "imagination",
     "image": "assets/images/treasure.webp",
     "audio": "assets/audio/treasure.mp3",
@@ -786,6 +884,7 @@
   {
     "id": "carrot",
     "text": "carrot",
+    "meaningKo": "당근",
     "topic": "vegetable-shop",
     "image": "assets/images/carrot.webp",
     "audio": "assets/audio/carrot.mp3",
@@ -794,6 +893,7 @@
   {
     "id": "bucket",
     "text": "bucket",
+    "meaningKo": "양동이",
     "topic": "playground-fun",
     "image": "assets/images/bucket.webp",
     "audio": "assets/audio/bucket.mp3",
@@ -802,6 +902,7 @@
   {
     "id": "cow",
     "text": "cow",
+    "meaningKo": "소",
     "topic": "animal-friends",
     "image": "assets/images/cow.webp",
     "audio": "assets/audio/cow.mp3",
@@ -810,6 +911,7 @@
   {
     "id": "horse",
     "text": "horse",
+    "meaningKo": "말",
     "topic": "animal-friends",
     "image": "assets/images/horse.webp",
     "audio": "assets/audio/horse.mp3",

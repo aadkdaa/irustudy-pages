@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
+  "wordIntro": { "enabled": true, "holdMs": 650, "moveMs": 600, "revealMs": 380, "scale": 1.8 },
   "rounds": [
-    { "mode": "learn", "shuffle": false, "prompt": "듣고 따라 말해 볼까?" },
+    { "mode": "learn", "shuffle": false, "showMeaning": true, "prompt": "글자를 보며 듣고 따라 말해 볼까?" },
     { "mode": "learn", "shuffle": false, "prompt": "한 번 더, 같이 말해 볼까?" },
     { "mode": "learn", "shuffle": true, "prompt": "이번엔 순서를 바꿔 볼까?" },
     { "mode": "challenge", "shuffle": true, "prompt": "이제 혼자 말해 볼까?" }

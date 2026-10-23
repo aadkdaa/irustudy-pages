@@ -21,19 +21,6 @@
     ]
   },
   {
-    "id": 51,
-    "kind": "review",
-    "reviewKey": "after-2",
-    "label": "2단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "pig",
-      "duck",
-      "rabbit",
-      "bear"
-    ]
-  },
-  {
     "id": 3,
     "newCandidates": [
       "ball",
@@ -53,19 +40,6 @@
     "reviewCandidates": [
       "ball",
       "fish"
-    ]
-  },
-  {
-    "id": 52,
-    "kind": "review",
-    "reviewKey": "after-4",
-    "label": "4단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "apple",
-      "banana",
-      "pig",
-      "duck"
     ]
   },
   {
@@ -91,19 +65,6 @@
     ]
   },
   {
-    "id": 53,
-    "kind": "review",
-    "reviewKey": "after-6",
-    "label": "6단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "jump",
-      "run",
-      "ball",
-      "fish"
-    ]
-  },
-  {
     "id": 7,
     "newCandidates": [
       "red",
@@ -123,19 +84,6 @@
     "reviewCandidates": [
       "red",
       "blue"
-    ]
-  },
-  {
-    "id": 54,
-    "kind": "review",
-    "reviewKey": "after-8",
-    "label": "8단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "sun",
-      "moon",
-      "car",
-      "bus"
     ]
   },
   {
@@ -161,19 +109,6 @@
     ]
   },
   {
-    "id": 55,
-    "kind": "review",
-    "reviewKey": "after-10",
-    "label": "10단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "dinosaur",
-      "dragon",
-      "red",
-      "blue"
-    ]
-  },
-  {
     "id": 11,
     "newCandidates": [
       "slide",
@@ -193,19 +128,6 @@
     "reviewCandidates": [
       "slide",
       "swing"
-    ]
-  },
-  {
-    "id": 56,
-    "kind": "review",
-    "reviewKey": "after-12",
-    "label": "12단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "monkey",
-      "elephant",
-      "mother",
-      "father"
     ]
   },
   {
@@ -231,19 +153,6 @@
     ]
   },
   {
-    "id": 57,
-    "kind": "review",
-    "reviewKey": "after-14",
-    "label": "14단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "strawberry",
-      "watermelon",
-      "slide",
-      "swing"
-    ]
-  },
-  {
     "id": 15,
     "newCandidates": [
       "train",
@@ -263,19 +172,6 @@
     "reviewCandidates": [
       "train",
       "plane"
-    ]
-  },
-  {
-    "id": 58,
-    "kind": "review",
-    "reviewKey": "after-16",
-    "label": "16단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "dance",
-      "clap",
-      "robot",
-      "doll"
     ]
   },
   {
@@ -301,19 +197,6 @@
     ]
   },
   {
-    "id": 59,
-    "kind": "review",
-    "reviewKey": "after-18",
-    "label": "18단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "star",
-      "cloud",
-      "train",
-      "plane"
-    ]
-  },
-  {
     "id": 19,
     "newCandidates": [
       "baby",
@@ -333,19 +216,6 @@
     "reviewCandidates": [
       "baby",
       "family"
-    ]
-  },
-  {
-    "id": 60,
-    "kind": "review",
-    "reviewKey": "after-20",
-    "label": "20단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "unicorn",
-      "monster",
-      "yellow",
-      "green"
     ]
   },
   {
@@ -371,19 +241,6 @@
     ]
   },
   {
-    "id": 61,
-    "kind": "review",
-    "reviewKey": "after-22",
-    "label": "22단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "lion",
-      "giraffe",
-      "baby",
-      "family"
-    ]
-  },
-  {
     "id": 23,
     "newCandidates": [
       "kite",
@@ -403,19 +260,6 @@
     "reviewCandidates": [
       "kite",
       "balloon"
-    ]
-  },
-  {
-    "id": 62,
-    "kind": "review",
-    "reviewKey": "after-24",
-    "label": "24단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "grape",
-      "orange",
-      "frog",
-      "sandbox"
     ]
   },
   {
@@ -441,19 +285,6 @@
     ]
   },
   {
-    "id": 63,
-    "kind": "review",
-    "reviewKey": "after-26",
-    "label": "26단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "wave",
-      "kick",
-      "kite",
-      "balloon"
-    ]
-  },
-  {
     "id": 27,
     "newCandidates": [
       "pink",
@@ -473,19 +304,6 @@
     "reviewCandidates": [
       "pink",
       "purple"
-    ]
-  },
-  {
-    "id": 64,
-    "kind": "review",
-    "reviewKey": "after-28",
-    "label": "28단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "tree",
-      "flower",
-      "boat",
-      "bike"
     ]
   },
   {
@@ -511,19 +329,6 @@
     ]
   },
   {
-    "id": 65,
-    "kind": "review",
-    "reviewKey": "after-30",
-    "label": "30단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "fairy",
-      "penguin",
-      "pink",
-      "purple"
-    ]
-  },
-  {
     "id": 31,
     "newCandidates": [
       "trampoline",
@@ -543,19 +348,6 @@
     "reviewCandidates": [
       "trampoline",
       "pool"
-    ]
-  },
-  {
-    "id": 66,
-    "kind": "review",
-    "reviewKey": "after-32",
-    "label": "32단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "bubbles",
-      "drum",
-      "friend",
-      "book"
     ]
   },
   {
@@ -581,19 +373,6 @@
     ]
   },
   {
-    "id": 67,
-    "kind": "review",
-    "reviewKey": "after-34",
-    "label": "34단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "truck",
-      "turtle",
-      "trampoline",
-      "pool"
-    ]
-  },
-  {
     "id": 35,
     "newCandidates": [
       "throw",
@@ -613,19 +392,6 @@
     "reviewCandidates": [
       "throw",
       "catch"
-    ]
-  },
-  {
-    "id": 68,
-    "kind": "review",
-    "reviewKey": "after-36",
-    "label": "36단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "black",
-      "white",
-      "ice-cream",
-      "cake"
     ]
   },
   {
@@ -651,19 +417,6 @@
     ]
   },
   {
-    "id": 69,
-    "kind": "review",
-    "reviewKey": "after-38",
-    "label": "38단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "bed",
-      "chair",
-      "throw",
-      "catch"
-    ]
-  },
-  {
     "id": 39,
     "newCandidates": [
       "pirate",
@@ -683,19 +436,6 @@
     "reviewCandidates": [
       "pirate",
       "superhero"
-    ]
-  },
-  {
-    "id": 70,
-    "kind": "review",
-    "reviewKey": "after-40",
-    "label": "40단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "water",
-      "sand",
-      "butterfly",
-      "bee"
     ]
   },
   {
@@ -721,19 +461,6 @@
     ]
   },
   {
-    "id": 71,
-    "kind": "review",
-    "reviewKey": "after-42",
-    "label": "42단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "cookie",
-      "juice",
-      "pirate",
-      "superhero"
-    ]
-  },
-  {
     "id": 43,
     "newCandidates": [
       "tiger",
@@ -753,19 +480,6 @@
     "reviewCandidates": [
       "tiger",
       "rocket"
-    ]
-  },
-  {
-    "id": 72,
-    "kind": "review",
-    "reviewKey": "after-44",
-    "label": "44단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "roll",
-      "hide",
-      "puzzle",
-      "pizza"
     ]
   },
   {
@@ -791,19 +505,6 @@
     ]
   },
   {
-    "id": 73,
-    "kind": "review",
-    "reviewKey": "after-46",
-    "label": "46단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "ladybug",
-      "snail",
-      "tiger",
-      "rocket"
-    ]
-  },
-  {
     "id": 47,
     "newCandidates": [
       "cup",
@@ -826,19 +527,6 @@
     ]
   },
   {
-    "id": 74,
-    "kind": "review",
-    "reviewKey": "after-48",
-    "label": "48단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "castle",
-      "treasure",
-      "brown",
-      "rainbow"
-    ]
-  },
-  {
     "id": 49,
     "newCandidates": [
       "carrot",
@@ -858,45 +546,6 @@
     "reviewCandidates": [
       "carrot",
       "bucket"
-    ]
-  },
-  {
-    "id": 75,
-    "kind": "review",
-    "reviewKey": "after-50",
-    "label": "50단계 뒤 복습",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "cow",
-      "horse",
-      "cup",
-      "milk"
-    ]
-  },
-  {
-    "id": 76,
-    "kind": "review",
-    "reviewKey": "final-1",
-    "label": "마무리 복습 1",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "castle",
-      "treasure",
-      "carrot",
-      "bucket"
-    ]
-  },
-  {
-    "id": 77,
-    "kind": "review",
-    "reviewKey": "final-2",
-    "label": "마무리 복습 2",
-    "newCandidates": [],
-    "reviewCandidates": [
-      "cow",
-      "horse",
-      "cat",
-      "dog"
     ]
   }
 ]

@@ -5,7 +5,6 @@
   "completionDays": 3,
   "learning": {
     "firstStage": { "newWordCount": 4, "reviewWordCount": 0 },
-    "default": { "newWordCount": 2, "reviewWordCount": 2 },
-    "review": { "newWordCount": 0, "reviewWordCount": 4 }
+    "default": { "newWordCount": 2, "reviewWordCount": 2 }
   }
 }

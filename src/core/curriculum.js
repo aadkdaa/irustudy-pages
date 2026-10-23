@@ -1,5 +1,5 @@
 export function stageCounts(config, stage, index) {
-  return stage.kind === 'review' ? config.learning.review : index === 0 ? config.learning.firstStage : config.learning.default;
+  return index === 0 ? config.learning.firstStage : config.learning.default;
 }
 
 export function stageLabel(stage) {

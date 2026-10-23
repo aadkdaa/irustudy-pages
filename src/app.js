@@ -28,12 +28,9 @@ function home() {
   try { progress = loadProgress(localStorage, data.stages); } catch (error) { showError(error); return; }
   screen = 'home';
   selectedStage = progress.currentStage;
-  const browseStages = data.stages.filter(stage => stage.kind !== 'review');
-  const currentIndex = data.stages.findIndex(stage => stage.id === progress.currentStage);
-  const currentLearningStage = data.stages.slice(0, currentIndex + 1).findLast(stage => stage.kind !== 'review');
+  const browseStages = data.stages;
   function browseIndex() {
-    const id = selectedStage === progress.currentStage ? currentLearningStage.id : selectedStage;
-    return browseStages.findIndex(stage => stage.id === id);
+    return browseStages.findIndex(stage => stage.id === selectedStage);
   }
   const section = element('section', 'home-screen screen');
   const intro = element('div', 'home-copy');
@@ -70,7 +67,7 @@ function home() {
     const index = browseIndex();
     const stage = browseStages[index + direction];
     if (!stage) return;
-    selectedStage = stage.id === currentLearningStage.id ? progress.currentStage : stage.id;
+    selectedStage = stage.id;
     updateStage();
   }
   chooser.append(previous, stageInfo, following);

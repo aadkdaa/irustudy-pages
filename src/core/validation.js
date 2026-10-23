@@ -27,11 +27,10 @@ export function validateData({ config, words, stages }) {
     if (!Array.isArray(stage.newCandidates) || !Array.isArray(stage.reviewCandidates)) fail('Missing candidates');
     const all = [...stage.newCandidates, ...stage.reviewCandidates];
     if (new Set(all).size !== all.length || all.some(id => !wordIds.has(id))) fail('Duplicate or unknown word reference');
-    if (stage.kind !== undefined && !['learn', 'review'].includes(stage.kind)) fail('Invalid stage kind');
+    if (stage.kind !== undefined && stage.kind !== 'learn') fail('Invalid stage kind');
     const count = stageCounts(config, stage, index);
     if (!count || !Number.isInteger(count.newWordCount) || count.newWordCount < 0 || !Number.isInteger(count.reviewWordCount) || count.reviewWordCount < 0 || count.newWordCount + count.reviewWordCount === 0) fail('Invalid word counts');
-    if (stage.kind === 'review' && (index === 0 || count.newWordCount !== 0 || stage.newCandidates.length)) fail('Invalid review-only stage');
-    if (stage.kind !== 'review' && !positive(count.newWordCount)) fail('Invalid word counts');
+    if (!positive(count.newWordCount)) fail('Invalid word counts');
     if (stage.newCandidates.length < count.newWordCount || stage.reviewCandidates.length < count.reviewWordCount) fail(`Insufficient candidates in stage ${stage.id}`);
     if (stage.reviewCandidates.slice(0, count.reviewWordCount).some(id => !introduced.has(id))) fail('Review word was not previously selected');
     stage.newCandidates.slice(0, count.newWordCount).forEach(id => introduced.add(id));

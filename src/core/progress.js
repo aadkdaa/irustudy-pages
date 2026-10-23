@@ -19,10 +19,21 @@ export function loadProgress(storage, stages) {
   let value;
   try { value = JSON.parse(raw); }
   catch { throw new InvalidProgressError('Saved progress requires review'); }
-  if (!value || value.schemaVersion !== 1 || !stages.some(stage => stage.id === value.currentStage) ||
+  if (!value || value.schemaVersion !== 1 ||
     !Number.isInteger(value.completedDays) || value.completedDays < 0 || !Array.isArray(value.history) ||
     value.history.some(item => !item || !/^\d{4}-\d{2}-\d{2}$/.test(item.date) || !Number.isInteger(item.stageId))) {
     throw new InvalidProgressError('Saved progress requires review');
+  }
+  if (!stages.some(stage => stage.id === value.currentStage)) {
+    // Retired review IDs 51–75 followed lessons 2, 4, …, 50;
+    // IDs 76–77 were final reviews. Keep history when moving past them.
+    if (!Number.isInteger(value.currentStage) || value.currentStage < 51 || value.currentStage > 77) {
+      throw new InvalidProgressError('Saved progress requires review');
+    }
+    const nextStage = Math.min((value.currentStage - 50) * 2 + 1, 50);
+    if (!stages.some(stage => stage.id === nextStage)) throw new InvalidProgressError('Saved progress requires review');
+    value = { ...value, currentStage: nextStage, completedDays: 0 };
+    storage.setItem(STORAGE_KEY, JSON.stringify(value));
   }
   return value;
 }

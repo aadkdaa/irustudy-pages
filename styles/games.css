@@ -1,0 +1,12 @@
+.game-menu { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
+.game-menu-caption { margin: 0 0 12px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.game-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.game-button { min-height: 54px; padding: 14px 22px; border: 1px solid #d2cce6; background: #e8e3f3; color: #574773; font-size: 16px; border-radius: 16px; box-shadow: 0 3px 0 #d2cce6; }
+.game-button:hover:not(:disabled) { background: #ddd5ed; }
+.result-screen .game-list { justify-content: center; }
+.game-screen { max-width: 640px; padding: 48px 0; text-align: center; }
+.game-badge { display: grid; place-items: center; width: 120px; height: 110px; margin: 0 auto 28px; border-radius: 28px; background: #e8e3f3; color: #574773; font: 800 36px 'Nunito', sans-serif; letter-spacing: .06em; transform: rotate(-5deg); }
+.game-description { color: var(--muted); font-size: 16px; line-height: 1.8; }
+.game-status { display: inline-block; margin: 8px 0 32px; padding: 8px 16px; border-radius: 24px; background: #e8e9df; color: #627058; font-size: 13px; }
+.game-screen > .button { display: block; margin-inline: auto; min-width: 180px; }
+@media (max-width: 650px) { .home-copy .game-list { justify-content: center; } }

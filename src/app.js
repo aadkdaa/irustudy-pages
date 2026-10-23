@@ -4,16 +4,37 @@ import { STORAGE_KEY, InvalidProgressError, recoverProgress, loadProgress, recor
 import { createAudioPlayer } from './media/audio.js';
 import { getRoutine } from './routines/registry.js';
 import { element, button, picture } from './ui/elements.js';
+import { canPlayGames } from './games/access.js';
+import { getGame } from './games/registry.js';
+import { createGameMenu } from './games/menu.js';
 
 const app = document.querySelector('#app');
 const settings = document.querySelector('#settings');
 const audio = createAudioPlayer();
-let data, progress, routine;
+let data, progress, routine, game;
 let screen = 'home';
 let recoveryMode = false;
 let selectedStage;
 
-function clearRoutine() { routine?.destroy(); routine = null; }
+function clearRoutine() {
+  routine?.destroy(); routine = null;
+  game?.destroy(); game = null;
+}
+function appendGames(container) {
+  // Only persisted completion unlocks games, including after a stage advances.
+  try {
+    const latest = loadProgress(localStorage, data.stages);
+    if (canPlayGames(latest, data.config.timeZone)) container.append(createGameMenu(startGame));
+  } catch { /* A failed read must not unlock games. */ }
+}
+function startGame(id) {
+  try { progress = loadProgress(localStorage, data.stages); } catch (error) { showError(error); return; }
+  if (!canPlayGames(progress, data.config.timeZone)) { home(); focusTitle(app); return; }
+  clearRoutine();
+  screen = 'game';
+  game = getGame(id)({ container: app, onExit() { home(); focusTitle(app); } });
+  game.start();
+}
 function save(next) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
   progress = next;
@@ -73,6 +94,7 @@ function home() {
   chooser.append(previous, stageInfo, following);
   updateStage();
   intro.append(chooser, stageNote, startButton);
+  appendGames(intro);
   const art = element('div', 'home-art');
   art.setAttribute('aria-hidden', 'true');
   const book = element('div', 'book');
@@ -101,6 +123,7 @@ function result(words, storageError, preview) {
   section.append(grid);
   if (storageError) section.append(element('p', 'error-note', '기록을 저장하지 못했어요. 보호자에게 알려 주세요.'));
   section.append(button('확인  ✓', 'primary result-confirm', () => { home(); focusTitle(app); }));
+  appendGames(section);
   app.replaceChildren(section);
   focusTitle(section);
 }

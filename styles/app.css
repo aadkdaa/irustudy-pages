@@ -29,6 +29,14 @@ footer { text-align: center; padding: 22px; font-size: 12px; color: #777c70; let
 .primary:hover:not(:disabled) { background: #ad4426; }
 .secondary { background: #e8e9df; color: var(--ink); box-shadow: 0 4px 0 #d5d9cb; }
 .start-button { min-width: 204px; text-align: center; }
+.stage-chooser { display: flex; align-items: center; gap: 12px; width: min(100%, 340px); padding: 10px; background: #fffdf8; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 6px 20px #303b3206; }
+.stage-info { flex: 1; min-width: 0; text-align: center; }
+.stage-caption { display: block; color: var(--muted); font-size: 11px; margin-bottom: 4px; }
+.stage-name { display: block; font-size: 17px; line-height: 1.5; }
+.stage-arrow { flex: 0 0 44px; min-height: 44px; padding: 0; border-radius: 14px; background: #eeeee6; color: var(--ink); font-size: 21px; }
+.stage-arrow:hover:not(:disabled) { background: #e2e5d7; }
+.stage-arrow:disabled { opacity: .25; }
+.stage-note { font-size: 12px; line-height: 1.6; color: var(--muted); margin: 12px 0 24px; }
 .home-art { position: relative; min-height: 410px; display: grid; place-items: center; }
 .book { position: relative; width: 300px; height: 370px; background: #d9d6ed; border-radius: 9px 24px 24px 9px; border-left: 15px solid #c7c2df; transform: rotate(8deg); box-shadow: 9px 9px 0 #efeee5, 11px 11px 0 #cccbbd, 24px 28px 45px #40452816; padding: 30px 22px; text-align: center; z-index: 1; }
 .book-eyebrow { font-size: 9px; letter-spacing: .19em; color: #5b5872; }
@@ -91,6 +99,7 @@ dialog .button { width: 100%; margin-top: 12px; }
   .home-title { font-size: 31px; line-height: 1.5; margin-bottom: 12px; }
   .home-subtitle { font-size: 14px; margin: 0 0 22px; }
   .start-button { text-align: center; }
+  .stage-chooser { margin-inline: auto; }
   .result-word { width: 125px; }
   .result-words { gap: 12px; margin: 24px 0; }
 }

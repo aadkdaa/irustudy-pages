@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "activeRoutine": "cards",
   "timeZone": "Asia/Seoul",
-  "completionDays": 4,
+  "completionDays": 3,
   "learning": {
     "firstStage": { "newWordCount": 4, "reviewWordCount": 0 },
     "default": { "newWordCount": 2, "reviewWordCount": 2 },

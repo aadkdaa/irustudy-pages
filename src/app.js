@@ -11,6 +11,7 @@ const audio = createAudioPlayer();
 let data, progress, routine;
 let screen = 'home';
 let recoveryMode = false;
+let selectedStage;
 
 function clearRoutine() { routine?.destroy(); routine = null; }
 function save(next) {
@@ -25,13 +26,48 @@ function focusTitle(container) {
 function home() {
   clearRoutine();
   screen = 'home';
+  selectedStage = progress.currentStage;
   const section = element('section', 'home-screen screen');
   const intro = element('div', 'home-copy');
   intro.append(element('p', 'eyebrow', 'HELLO, LITTLE EXPLORER'));
   const title = element('h1', 'home-title');
   title.append(document.createTextNode('작은 말 한마디,'), element('br'), element('span', 'title-accent', '커지는 나의 세상.'));
   intro.append(title, element('p', 'home-subtitle', '듣고, 따라 하고, 혼자서도 말해 봐요.'));
-  intro.append(button('시작', 'primary start-button', start));
+  const chooser = element('div', 'stage-chooser');
+  chooser.setAttribute('role', 'group');
+  chooser.setAttribute('aria-label', '학습할 단계 선택');
+  const stageInfo = element('div', 'stage-info');
+  stageInfo.setAttribute('aria-live', 'polite');
+  stageInfo.setAttribute('aria-atomic', 'true');
+  const stageCaption = element('span', 'stage-caption');
+  const stageName = element('strong', 'stage-name');
+  stageInfo.append(stageCaption, stageName);
+  const previous = button('←', 'stage-arrow', () => moveStage(-1));
+  const following = button('→', 'stage-arrow', () => moveStage(1));
+  previous.setAttribute('aria-label', '이전 단계');
+  following.setAttribute('aria-label', '다음 단계');
+  const stageNote = element('p', 'stage-note');
+  const startButton = button('시작', 'primary start-button', start);
+  function updateStage() {
+    const index = data.stages.findIndex(stage => stage.id === selectedStage);
+    const current = selectedStage === progress.currentStage;
+    stageName.textContent = stageLabel(data.stages[index]);
+    stageCaption.textContent = current ? '지금 배우는 단계' : '다른 단계 둘러보기';
+    stageNote.textContent = current ? `${progress.completedDays}/${data.config.completionDays}일 완료 · 조금씩 함께 배워요` : '둘러보는 동안 내 학습 진도는 그대로예요';
+    previous.disabled = index === 0;
+    following.disabled = index === data.stages.length - 1;
+    startButton.textContent = current ? '시작' : '이 단계 보기';
+  }
+  function moveStage(direction) {
+    const index = data.stages.findIndex(stage => stage.id === selectedStage);
+    const stage = data.stages[index + direction];
+    if (!stage) return;
+    selectedStage = stage.id;
+    updateStage();
+  }
+  chooser.append(previous, stageInfo, following);
+  updateStage();
+  intro.append(chooser, stageNote, startButton);
   const art = element('div', 'home-art');
   art.setAttribute('aria-hidden', 'true');
   const book = element('div', 'book');
@@ -43,12 +79,13 @@ function home() {
   section.append(intro, art);
   app.replaceChildren(section);
 }
-function result(words, storageError) {
+function result(words, storageError, preview) {
   clearRoutine();
   screen = 'result';
   const section = element('section', 'result-screen screen');
   section.append(element('div', 'celebration', '✦'), element('p', 'eyebrow', 'A LITTLE MORE, EVERY DAY'));
-  section.append(element('h1', 'result-title', '오늘 학습을 완료했어요'));
+  section.append(element('h1', 'result-title', preview ? '단계 둘러보기를 마쳤어요' : '오늘 학습을 완료했어요'));
+  if (preview) section.append(element('p', 'result-subtitle', '내 학습 진도는 그대로예요.'));
   section.append(element('p', 'result-subtitle', '오늘 만난 단어들, 잘했어요!'));
   const grid = element('div', 'result-words');
   for (const word of words) {
@@ -66,7 +103,8 @@ function start() {
   clearRoutine();
   // Re-read persistent state to avoid using an old tab's stage.
   try { progress = loadProgress(localStorage, data.stages); } catch (error) { showError(error); return; }
-  const stageId = progress.currentStage;
+  const stageId = selectedStage;
+  const preview = stageId !== progress.currentStage;
   const words = selectWords(data, stageId);
   let completed = false;
   screen = 'routine';
@@ -77,13 +115,13 @@ function start() {
       if (completed) return;
       completed = true;
       let failed = false;
-      try {
+      if (!preview) try {
         const latest = loadProgress(localStorage, data.stages);
         save(recordCompletion(latest, {
           stageId, date: dateKey(new Date(), data.config.timeZone), wordIds: words.map(word => word.id),
         }, data.stages, data.config.completionDays));
       } catch { failed = true; }
-      result(words, failed);
+      result(words, failed, preview);
     },
   });
   routine.start();

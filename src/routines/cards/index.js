@@ -67,18 +67,15 @@ export function createCardRoutine({ container, words, config, audio, onComplete 
         if (manual && challenge) confirmed = true;
         feedback.textContent = result === 'placeholder' && manual ? '소리는 곧 만나요.' : '';
         if (challenge && confirmed) {
-          sound.textContent = '확인';
-          sound.classList.add('confirmed');
+          advance();
+          return;
         }
       } else if (result === 'failed') {
         feedback.textContent = '소리가 안 들렸어요. 다시 눌러 주세요.';
       }
       next.disabled = !confirmed;
     }
-    const sound = button(challenge ? '정답 확인' : '↻ 다시 듣기', challenge ? 'primary' : 'secondary', () => {
-      if (challenge && confirmed) advance();
-      else listen();
-    });
+    const sound = button(challenge ? '정답 확인' : '↻ 다시 듣기', challenge ? 'primary' : 'secondary', () => listen());
     if (challenge) {
       actions.classList.add('single-action');
       actions.append(sound);

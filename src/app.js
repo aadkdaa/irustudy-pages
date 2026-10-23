@@ -25,8 +25,16 @@ function focusTitle(container) {
 }
 function home() {
   clearRoutine();
+  try { progress = loadProgress(localStorage, data.stages); } catch (error) { showError(error); return; }
   screen = 'home';
   selectedStage = progress.currentStage;
+  const browseStages = data.stages.filter(stage => stage.kind !== 'review');
+  const currentIndex = data.stages.findIndex(stage => stage.id === progress.currentStage);
+  const currentLearningStage = data.stages.slice(0, currentIndex + 1).findLast(stage => stage.kind !== 'review');
+  function browseIndex() {
+    const id = selectedStage === progress.currentStage ? currentLearningStage.id : selectedStage;
+    return browseStages.findIndex(stage => stage.id === id);
+  }
   const section = element('section', 'home-screen screen');
   const intro = element('div', 'home-copy');
   intro.append(element('p', 'eyebrow', 'HELLO, LITTLE EXPLORER'));
@@ -49,20 +57,20 @@ function home() {
   const stageNote = element('p', 'stage-note');
   const startButton = button('시작', 'primary start-button', start);
   function updateStage() {
-    const index = data.stages.findIndex(stage => stage.id === selectedStage);
+    const index = browseIndex();
     const current = selectedStage === progress.currentStage;
-    stageName.textContent = stageLabel(data.stages[index]);
+    stageName.textContent = stageLabel(browseStages[index]);
     stageCaption.textContent = current ? '지금 배우는 단계' : '다른 단계 둘러보기';
     stageNote.textContent = current ? `${progress.completedDays}/${data.config.completionDays}일 완료 · 조금씩 함께 배워요` : '둘러보는 동안 내 학습 진도는 그대로예요';
     previous.disabled = index === 0;
-    following.disabled = index === data.stages.length - 1;
+    following.disabled = index === browseStages.length - 1;
     startButton.textContent = current ? '시작' : '이 단계 보기';
   }
   function moveStage(direction) {
-    const index = data.stages.findIndex(stage => stage.id === selectedStage);
-    const stage = data.stages[index + direction];
+    const index = browseIndex();
+    const stage = browseStages[index + direction];
     if (!stage) return;
-    selectedStage = stage.id;
+    selectedStage = stage.id === currentLearningStage.id ? progress.currentStage : stage.id;
     updateStage();
   }
   chooser.append(previous, stageInfo, following);

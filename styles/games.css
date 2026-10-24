@@ -1,3 +1,5 @@
+@import url('./memory.css');
+
 .game-menu { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); }
 .game-menu-caption { margin: 0 0 12px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .game-list { display: flex; flex-wrap: wrap; gap: 12px; }

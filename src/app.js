@@ -7,6 +7,7 @@ import { element, button, picture } from './ui/elements.js';
 import { canPlayGames } from './games/access.js';
 import { getGame } from './games/registry.js';
 import { createGameMenu } from './games/menu.js';
+import { learnedWords } from './games/content.js';
 
 const app = document.querySelector('#app');
 const settings = document.querySelector('#settings');
@@ -32,7 +33,7 @@ function startGame(id) {
   if (!canPlayGames(progress, data.config.timeZone)) { home(); focusTitle(app); return; }
   clearRoutine();
   screen = 'game';
-  game = getGame(id)({ container: app, onExit() { home(); focusTitle(app); } });
+  game = getGame(id)({ container: app, words: learnedWords(data.words, progress.history), onExit() { home(); focusTitle(app); } });
   game.start();
 }
 function save(next) {

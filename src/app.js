@@ -8,8 +8,10 @@ import { canPlayGames } from './games/access.js';
 import { getGame } from './games/registry.js';
 import { createGameMenu } from './games/menu.js';
 import { learnedWords } from './games/content.js';
+import { fitViewport } from './ui/viewport.js';
 
 const app = document.querySelector('#app');
+fitViewport(app);
 const settings = document.querySelector('#settings');
 const audio = createAudioPlayer();
 let data, progress, routine, game;

@@ -1,8 +1,10 @@
 import { element, button, picture } from '../../ui/elements.js';
 import { createAudioPlayer } from '../../media/audio.js';
 import { makeDeck } from './plan.js';
+import { fitViewport } from '../../ui/viewport.js';
 
 export function createAbcMemory({ container, words, onExit, audio = createAudioPlayer() }) {
+  if (typeof ResizeObserver !== 'undefined') fitViewport(container);
   let cards, selected, pairs, busy, destroyed = false, generation = 0, timer;
   let status, counter, retry, finish;
 

@@ -916,5 +916,23 @@
     "image": "assets/images/horse.webp",
     "audio": "assets/audio/horse.mp3",
     "color": "lavender"
+  },
+  {
+    "id": "panda",
+    "text": "panda",
+    "meaningKo": "판다",
+    "topic": "animal-friends",
+    "image": "assets/images/panda.webp",
+    "audio": "assets/audio/panda.mp3",
+    "color": "peach"
+  },
+  {
+    "id": "zebra",
+    "text": "zebra",
+    "meaningKo": "얼룩말",
+    "topic": "animal-friends",
+    "image": "assets/images/zebra.webp",
+    "audio": "assets/audio/zebra.mp3",
+    "color": "lavender"
   }
 ]

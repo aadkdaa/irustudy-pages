@@ -6,7 +6,7 @@ import { fitViewport } from '../../ui/viewport.js';
 export function createAbcMemory({ container, words, onExit, audio = createAudioPlayer() }) {
   if (typeof ResizeObserver !== 'undefined') fitViewport(container);
   let cards, selected, pairs, busy, destroyed = false, generation = 0, timer;
-  let status, counter, retry, finish;
+  let status, counter, retry, finish, finishActions, exitButton;
 
   function lockCards() {
     for (const card of cards) card.node.disabled = busy || card.open || card.matched;
@@ -40,8 +40,11 @@ export function createAbcMemory({ container, words, onExit, audio = createAudioP
       status.textContent = pairs === 6 ? '여섯 쌍을 모두 찾았어요!' : '짝을 찾았어요! 다음 짝도 찾아볼까요?';
       lockCards();
       if (pairs === 6) {
+        finishActions.append(exitButton);
         finish.hidden = false;
         finish.querySelector('h2').focus({ preventScroll: true });
+        // The last word has finished; a blocked effect must not block completion.
+        audio.play('assets/sounds/success.wav').catch(() => {});
       }
     } else {
       status.textContent = '다른 짝이에요. 위치를 기억해 주세요!';
@@ -136,8 +139,11 @@ export function createAbcMemory({ container, words, onExit, audio = createAudioP
     finish.hidden = true;
     const finishTitle = element('h2', '', '모두 맞췄어요!');
     finishTitle.tabIndex = -1;
-    finish.append(finishTitle, element('p', '', '그림과 단어가 모두 짝을 찾았어요.'), button('한 번 더', 'primary', start));
-    screen.append(board, status, retry, finish, button('처음으로', 'secondary memory-exit', onExit));
+    finishActions = element('div', 'memory-finish-actions');
+    finishActions.append(button('한 번 더', 'primary', start));
+    exitButton = button('처음으로', 'secondary memory-exit', onExit);
+    finish.append(finishTitle, element('p', '', '그림과 단어가 모두 짝을 찾았어요.'), finishActions);
+    screen.append(board, status, retry, finish, exitButton);
     container.replaceChildren(screen);
     title.focus({ preventScroll: true });
     document.addEventListener('visibilitychange', onVisibility);

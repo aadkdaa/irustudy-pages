@@ -2,11 +2,27 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { makeDeck } from '../src/games/abc-memory/plan.js';
 import { createAbcMemory } from '../src/games/abc-memory/index.js';
-import { learnedWords } from '../src/games/content.js';
+import { learnedWords, todayStageWords } from '../src/games/content.js';
 
 const words = ['cat', 'dog', 'pig', 'duck', 'bear', 'fish'].map(id => ({
   id, text: id, image: `assets/images/${id}.webp`, audio: `assets/audio/${id}.mp3`,
 }));
+
+test('game uses the completed stage four words after advancement, with Korean day boundary', () => {
+  const data = { words, config: { timeZone: 'Asia/Seoul' }, stages: [
+    { id: 1, wordIds: ['cat', 'dog', 'pig', 'duck'] },
+    { id: 2, wordIds: ['bear', 'fish'] },
+  ] };
+  const history = [
+    { date: '2026-10-24', stageId: 2, wordIds: ['bear', 'fish'] },
+    { date: '2026-10-25', stageId: 1, wordIds: ['cat', 'dog', 'pig', 'duck', 'bear', 'fish'] },
+  ];
+  const pool = todayStageWords(data, history, new Date('2026-10-24T15:00:00Z'));
+  assert.deepEqual(pool.map(word => word.id), ['cat', 'dog', 'pig', 'duck']);
+  assert.equal(makeDeck(pool).length, 12);
+  assert.deepEqual(todayStageWords(data, history, new Date('2026-10-25T15:00:00Z')), []);
+  assert.deepEqual(todayStageWords(data, [], new Date('2026-10-24T15:00:00Z')), []);
+});
 
 test('deck has six distinct picture/word pairs', () => {
   const deck = makeDeck([...words, words[0]], () => 0.4);
@@ -81,7 +97,8 @@ test('audio gates turns, mismatches close, matches stay, completion and cleanup 
   globalThis.document = { baseURI: 'http://localhost/', createElement: tag => new Node(tag), addEventListener() {}, removeEventListener() {} };
   globalThis.Image = class extends Node { constructor() { super('img'); } };
   let pending, plays = 0;
-  const audio = { play() { plays++; return new Promise(resolve => { pending = resolve; }); }, stop() { pending?.('cancelled'); pending = null; } };
+  const paths = [];
+  const audio = { play(path) { plays++; paths.push(path); return new Promise(resolve => { pending = resolve; }); }, stop() { pending?.('cancelled'); pending = null; } };
   const container = new Node('main');
   const game = createAbcMemory({ container, words, audio, onExit() {} });
   const completeAudio = async result => { const resolve = pending; pending = null; resolve(result); await tick(); };
@@ -110,11 +127,16 @@ test('audio gates turns, mismatches close, matches stay, completion and cleanup 
     assert.ok(first.className.includes('is-matched') && partner.className.includes('is-matched'));
     assert.ok(first.disabled && partner.disabled);
     assert.equal(byClass(container, 'memory-counter').textContent, '1 / 6쌍');
+    assert.equal(paths.includes('assets/sounds/success.wav'), false);
     for (const word of words.filter(word => word.id !== key(first))) {
       for (const card of cards.filter(card => key(card) === word.id)) { card.click(); await completeAudio('played'); }
     }
     assert.equal(byClass(container, 'memory-counter').textContent, '6 / 6쌍');
     assert.equal(byClass(container, 'memory-finish').hidden, false);
+    const finishButtons = byClass(container, 'memory-finish-actions').children;
+    assert.deepEqual(finishButtons.map(node => node.textContent), ['한 번 더', '처음으로']);
+    assert.equal(paths.at(-1), 'assets/sounds/success.wav');
+    assert.equal(paths.filter(path => path === 'assets/sounds/success.wav').length, 1);
     assert.ok(cards.every(card => card.disabled && card.className.includes('is-matched')));
     byClass(container, 'memory-finish').querySelector('button').click();
     assert.equal(byClass(container, 'memory-counter').textContent, '0 / 6쌍');

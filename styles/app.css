@@ -30,6 +30,9 @@ footer { flex-shrink: 0; text-align: center; padding: clamp(6px, 1.5dvh, 16px); 
 .primary:hover:not(:disabled) { background: #ad4426; }
 .secondary { background: #e8e9df; color: var(--ink); box-shadow: 0 4px 0 #d5d9cb; }
 .start-button { min-width: 204px; text-align: center; }
+.home-actions { display: flex; gap: 12px; width: min(100%, 340px); align-items: stretch; }
+.home-actions .button { flex: 1; min-width: 0; min-height: 56px; margin: 0; padding: 14px 16px; font-size: 17px; line-height: 1.5; white-space: nowrap; }
+.home-copy { min-width: 0; }
 .stage-chooser { display: flex; align-items: center; gap: 12px; width: min(100%, 340px); padding: 10px; background: #fffdf8; border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 6px 20px #303b3206; }
 .stage-info { flex: 1; min-width: 0; text-align: center; }
 .stage-caption { display: block; color: var(--muted); font-size: 11px; margin-bottom: 4px; }
@@ -101,6 +104,7 @@ dialog .button { width: 100%; margin-top: 12px; }
   .home-subtitle { font-size: 14px; margin: 0 0 22px; }
   .start-button { text-align: center; }
   .stage-chooser { margin-inline: auto; }
+  .home-actions { margin-inline: auto; }
   .result-word { width: 125px; }
   .result-words { gap: 12px; margin: 24px 0; }
 }
@@ -117,4 +121,26 @@ dialog .button { width: 100%; margin-top: 12px; }
 @media (max-width: 650px) and (max-height: 850px) {
   .home-art { display: none; }
   .home-title { font-size: 28px; }
+}
+@media (max-height: 650px) {
+  .home-art { display: none; }
+  .home-screen { display: block; max-width: 600px; text-align: center; padding-block: 8px; }
+  .home-title { font-size: 25px; line-height: 1.35; margin-bottom: 8px; }
+  .home-copy .eyebrow { display: none; }
+  .home-subtitle { font-size: 13px; margin: 0 0 12px; }
+  .stage-chooser, .home-actions { margin-inline: auto; }
+  .stage-note { margin: 8px 0 12px; }
+  .result-screen { padding-block: 8px; }
+  .celebration, .result-screen .eyebrow { display: none; }
+  .result-title { font-size: 24px; margin: 8px 0; }
+  .result-subtitle { margin: 8px 0; }
+  .result-words { margin-block: 12px; }
+  .result-word { width: 100px; padding: 6px; }
+  .result-word .word-picture { height: 60px; }
+  .result-word > span { font-size: 18px; margin-top: 6px; }
+  .game-menu { padding-block: 8px; }
+  .game-menu .eyebrow { display: none; }
+  .game-menu-caption, .game-list { margin-bottom: 16px; }
+  .game-choice { padding: 16px; gap: 10px; }
+  .game-choice-icon { height: 48px; }
 }

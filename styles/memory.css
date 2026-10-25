@@ -38,6 +38,8 @@
 .memory-finish h2 { margin: 0; color: #42734f; }
 .memory-finish h2:focus { outline: none; }
 .memory-finish p { color: #627058; }
+.memory-finish-actions { display: flex; justify-content: center; align-items: stretch; gap: 12px; }
+.memory-finish-actions .button { flex: 1; max-width: 170px; min-width: 0; min-height: 52px; margin: 0; padding: 12px 10px; font-size: 16px; line-height: 1.5; white-space: nowrap; }
 @media (max-width: 650px) {
   .memory-screen { padding: 24px 0; }
   .memory-board { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }

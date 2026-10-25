@@ -7,7 +7,7 @@ import { element, button, picture } from './ui/elements.js';
 import { canPlayGames } from './games/access.js';
 import { getGame } from './games/registry.js';
 import { createGameMenu } from './games/menu.js';
-import { learnedWords } from './games/content.js';
+import { todayStageWords } from './games/content.js';
 import { fitViewport } from './ui/viewport.js';
 
 const app = document.querySelector('#app');
@@ -20,22 +20,24 @@ let recoveryMode = false;
 let selectedStage;
 
 function clearRoutine() {
+  audio.stop();
   routine?.destroy(); routine = null;
   game?.destroy(); game = null;
 }
-function appendGames(container) {
-  // Only persisted completion unlocks games, including after a stage advances.
-  try {
-    const latest = loadProgress(localStorage, data.stages);
-    if (canPlayGames(latest, data.config.timeZone)) container.append(createGameMenu(startGame));
-  } catch { /* A failed read must not unlock games. */ }
+function showGames() {
+  try { progress = loadProgress(localStorage, data.stages); } catch (error) { showError(error); return; }
+  if (!canPlayGames(progress, data.config.timeZone)) { home(); focusTitle(app); return; }
+  clearRoutine();
+  screen = 'games';
+  app.replaceChildren(createGameMenu(startGame, () => { home(); focusTitle(app); }));
+  focusTitle(app);
 }
 function startGame(id) {
   try { progress = loadProgress(localStorage, data.stages); } catch (error) { showError(error); return; }
   if (!canPlayGames(progress, data.config.timeZone)) { home(); focusTitle(app); return; }
   clearRoutine();
   screen = 'game';
-  game = getGame(id)({ container: app, words: learnedWords(data.words, progress.history), onExit() { home(); focusTitle(app); } });
+  game = getGame(id)({ container: app, words: todayStageWords(data, progress.history), onExit() { home(); focusTitle(app); } });
   game.start();
 }
 function save(next) {
@@ -76,16 +78,16 @@ function home() {
   previous.setAttribute('aria-label', '이전 단계');
   following.setAttribute('aria-label', '다음 단계');
   const stageNote = element('p', 'stage-note');
-  const startButton = button('시작', 'primary start-button', start);
+  const startButton = button('학습 시작', 'primary start-button', start);
   function updateStage() {
     const index = browseIndex();
     const current = selectedStage === progress.currentStage;
     stageName.textContent = stageLabel(browseStages[index]);
     stageCaption.textContent = current ? '지금 배우는 단계' : '다른 단계 둘러보기';
-    stageNote.textContent = current ? `${progress.completedDays}/${data.config.completionDays}일 완료 · 조금씩 함께 배워요` : '둘러보는 동안 내 학습 진도는 그대로예요';
+    stageNote.textContent = current ? (canPlayGames(progress, data.config.timeZone) ? '오늘 학습 완료 · 다음 단계는 내일 함께해요' : '오늘 한 번 끝내면 다음 단계로 넘어가요') : '둘러보는 동안 내 학습 진도는 그대로예요';
     previous.disabled = index === 0;
     following.disabled = index === browseStages.length - 1;
-    startButton.textContent = current ? '시작' : '이 단계 보기';
+    startButton.textContent = current ? '학습 시작' : '이 단계 보기';
   }
   function moveStage(direction) {
     const index = browseIndex();
@@ -96,8 +98,10 @@ function home() {
   }
   chooser.append(previous, stageInfo, following);
   updateStage();
-  intro.append(chooser, stageNote, startButton);
-  appendGames(intro);
+  const actions = element('div', 'home-actions');
+  actions.append(startButton);
+  if (canPlayGames(progress, data.config.timeZone)) actions.append(button('게임', 'game-button', showGames));
+  intro.append(chooser, stageNote, actions);
   const art = element('div', 'home-art');
   art.setAttribute('aria-hidden', 'true');
   const book = element('div', 'book');
@@ -126,9 +130,9 @@ function result(words, storageError, preview) {
   section.append(grid);
   if (storageError) section.append(element('p', 'error-note', '기록을 저장하지 못했어요. 보호자에게 알려 주세요.'));
   section.append(button('확인  ✓', 'primary result-confirm', () => { home(); focusTitle(app); }));
-  appendGames(section);
   app.replaceChildren(section);
   focusTitle(section);
+  if (!preview && !storageError) audio.play('assets/sounds/success.wav').catch(() => {});
 }
 function start() {
   clearRoutine();
@@ -182,10 +186,10 @@ function openSettings(recover = false) {
   }));
   select.value = recoveryMode ? data.stages[0].id : progress.currentStage;
   document.querySelector('#settings-title').textContent = recoveryMode ? '진도 복구' : '학습 설정';
-  document.querySelector('#saved-status').textContent = recoveryMode ? '기억하고 있는 학습 단계를 선택해 주세요.' : `현재 ${stageLabel(data.stages.find(stage => stage.id === progress.currentStage))} · ${progress.completedDays}/${data.config.completionDays}일 완료`;
+  document.querySelector('#saved-status').textContent = recoveryMode ? '기억하고 있는 학습 단계를 선택해 주세요.' : `현재 ${stageLabel(data.stages.find(stage => stage.id === progress.currentStage))} · 하루 한 단계`;
   document.querySelector('#settings-help').textContent = recoveryMode
-    ? '선택한 단계에서 완료 일수를 처음부터 셉니다. 이전 학습 기록은 복원되지 않아요. 손상된 원본은 이 브라우저에 별도로 보관합니다.'
-    : '다른 단계로 변경하면 해당 단계의 완료 일수는 처음부터 셉니다. 오늘 학습 기록은 유지돼요.';
+    ? '선택한 단계에서 다시 시작합니다. 이전 학습 기록은 복원되지 않아요. 손상된 원본은 이 브라우저에 별도로 보관합니다.'
+    : '선택한 단계에서 이어서 학습합니다. 오늘 학습 기록은 유지돼요.';
   document.querySelector('#settings-form button[type="submit"]').textContent = recoveryMode ? '이 단계로 복구' : '저장';
   settings.showModal();
 }

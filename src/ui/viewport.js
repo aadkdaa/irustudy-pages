@@ -9,6 +9,11 @@ export function fitViewport(container) {
   function fit() {
     const screen = container.querySelector('.screen');
     if (!screen || !container.clientWidth || !container.clientHeight) return;
+    if (screen.matches('.home-screen, .game-menu, .result-screen')) {
+      screen.style.removeProperty('zoom');
+      screen.style.removeProperty('width');
+      return;
+    }
     screen.style.zoom = '1';
     screen.style.width = `${container.clientWidth}px`;
     const height = Math.max(screen.offsetHeight, screen.scrollHeight);

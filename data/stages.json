@@ -1,551 +1,548 @@
 [
   {
     "id": 1,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "cat",
       "dog",
       "pig",
       "duck"
-    ],
-    "reviewCandidates": []
+    ]
   },
   {
     "id": 2,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "rabbit",
-      "bear"
-    ],
-    "reviewCandidates": [
-      "cat",
-      "dog"
+      "bear",
+      "ball",
+      "fish"
     ]
   },
   {
     "id": 3,
-    "newCandidates": [
-      "ball",
-      "fish"
-    ],
-    "reviewCandidates": [
-      "cat",
-      "dog"
+    "kind": "learn",
+    "wordIds": [
+      "apple",
+      "banana",
+      "car",
+      "bus"
     ]
   },
   {
     "id": 4,
-    "newCandidates": [
-      "apple",
-      "banana"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 1,
+    "wordIds": [
+      "cat",
+      "dog",
+      "pig",
+      "duck"
+    ]
+  },
+  {
+    "id": 5,
+    "kind": "repeat",
+    "repeatOf": 2,
+    "wordIds": [
+      "rabbit",
+      "bear",
       "ball",
       "fish"
     ]
   },
   {
-    "id": 5,
-    "newCandidates": [
-      "car",
-      "bus"
-    ],
-    "reviewCandidates": [
-      "rabbit",
-      "bear"
-    ]
-  },
-  {
     "id": 6,
-    "newCandidates": [
-      "jump",
-      "run"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 3,
+    "wordIds": [
+      "apple",
+      "banana",
       "car",
       "bus"
     ]
   },
   {
     "id": 7,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
+      "jump",
+      "run",
       "red",
       "blue"
-    ],
-    "reviewCandidates": [
-      "apple",
-      "banana"
     ]
   },
   {
     "id": 8,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "sun",
-      "moon"
-    ],
-    "reviewCandidates": [
+      "moon",
+      "mother",
+      "father"
+    ]
+  },
+  {
+    "id": 9,
+    "kind": "learn",
+    "wordIds": [
+      "dinosaur",
+      "dragon",
+      "slide",
+      "swing"
+    ]
+  },
+  {
+    "id": 10,
+    "kind": "repeat",
+    "repeatOf": 7,
+    "wordIds": [
+      "jump",
+      "run",
       "red",
       "blue"
     ]
   },
   {
-    "id": 9,
-    "newCandidates": [
-      "mother",
-      "father"
-    ],
-    "reviewCandidates": [
-      "jump",
-      "run"
-    ]
-  },
-  {
-    "id": 10,
-    "newCandidates": [
-      "dinosaur",
-      "dragon"
-    ],
-    "reviewCandidates": [
-      "mother",
-      "father"
-    ]
-  },
-  {
     "id": 11,
-    "newCandidates": [
-      "slide",
-      "swing"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 8,
+    "wordIds": [
       "sun",
-      "moon"
+      "moon",
+      "mother",
+      "father"
     ]
   },
   {
     "id": 12,
-    "newCandidates": [
-      "monkey",
-      "elephant"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 9,
+    "wordIds": [
+      "dinosaur",
+      "dragon",
       "slide",
       "swing"
     ]
   },
   {
     "id": 13,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
+      "monkey",
+      "elephant",
       "robot",
       "doll"
-    ],
-    "reviewCandidates": [
-      "dinosaur",
-      "dragon"
     ]
   },
   {
     "id": 14,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "strawberry",
-      "watermelon"
-    ],
-    "reviewCandidates": [
+      "watermelon",
+      "train",
+      "plane"
+    ]
+  },
+  {
+    "id": 15,
+    "kind": "learn",
+    "wordIds": [
+      "dance",
+      "clap",
+      "yellow",
+      "green"
+    ]
+  },
+  {
+    "id": 16,
+    "kind": "repeat",
+    "repeatOf": 13,
+    "wordIds": [
+      "monkey",
+      "elephant",
       "robot",
       "doll"
     ]
   },
   {
-    "id": 15,
-    "newCandidates": [
-      "train",
-      "plane"
-    ],
-    "reviewCandidates": [
-      "monkey",
-      "elephant"
-    ]
-  },
-  {
-    "id": 16,
-    "newCandidates": [
-      "dance",
-      "clap"
-    ],
-    "reviewCandidates": [
-      "train",
-      "plane"
-    ]
-  },
-  {
     "id": 17,
-    "newCandidates": [
-      "yellow",
-      "green"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 14,
+    "wordIds": [
       "strawberry",
-      "watermelon"
+      "watermelon",
+      "train",
+      "plane"
     ]
   },
   {
     "id": 18,
-    "newCandidates": [
-      "star",
-      "cloud"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 15,
+    "wordIds": [
+      "dance",
+      "clap",
       "yellow",
       "green"
     ]
   },
   {
     "id": 19,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
+      "star",
+      "cloud",
       "baby",
       "family"
-    ],
-    "reviewCandidates": [
-      "dance",
-      "clap"
     ]
   },
   {
     "id": 20,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "unicorn",
-      "monster"
-    ],
-    "reviewCandidates": [
+      "monster",
+      "frog",
+      "sandbox"
+    ]
+  },
+  {
+    "id": 21,
+    "kind": "learn",
+    "wordIds": [
+      "lion",
+      "giraffe",
+      "kite",
+      "balloon"
+    ]
+  },
+  {
+    "id": 22,
+    "kind": "repeat",
+    "repeatOf": 19,
+    "wordIds": [
+      "star",
+      "cloud",
       "baby",
       "family"
     ]
   },
   {
-    "id": 21,
-    "newCandidates": [
-      "frog",
-      "sandbox"
-    ],
-    "reviewCandidates": [
-      "star",
-      "cloud"
-    ]
-  },
-  {
-    "id": 22,
-    "newCandidates": [
-      "lion",
-      "giraffe"
-    ],
-    "reviewCandidates": [
-      "frog",
-      "sandbox"
-    ]
-  },
-  {
     "id": 23,
-    "newCandidates": [
-      "kite",
-      "balloon"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 20,
+    "wordIds": [
       "unicorn",
-      "monster"
+      "monster",
+      "frog",
+      "sandbox"
     ]
   },
   {
     "id": 24,
-    "newCandidates": [
-      "grape",
-      "orange"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 21,
+    "wordIds": [
+      "lion",
+      "giraffe",
       "kite",
       "balloon"
     ]
   },
   {
     "id": 25,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
+      "grape",
+      "orange",
       "boat",
       "bike"
-    ],
-    "reviewCandidates": [
-      "lion",
-      "giraffe"
     ]
   },
   {
     "id": 26,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "wave",
-      "kick"
-    ],
-    "reviewCandidates": [
+      "kick",
+      "pink",
+      "purple"
+    ]
+  },
+  {
+    "id": 27,
+    "kind": "learn",
+    "wordIds": [
+      "tree",
+      "flower",
+      "friend",
+      "book"
+    ]
+  },
+  {
+    "id": 28,
+    "kind": "repeat",
+    "repeatOf": 25,
+    "wordIds": [
+      "grape",
+      "orange",
       "boat",
       "bike"
     ]
   },
   {
-    "id": 27,
-    "newCandidates": [
-      "pink",
-      "purple"
-    ],
-    "reviewCandidates": [
-      "grape",
-      "orange"
-    ]
-  },
-  {
-    "id": 28,
-    "newCandidates": [
-      "tree",
-      "flower"
-    ],
-    "reviewCandidates": [
-      "pink",
-      "purple"
-    ]
-  },
-  {
     "id": 29,
-    "newCandidates": [
-      "friend",
-      "book"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 26,
+    "wordIds": [
       "wave",
-      "kick"
+      "kick",
+      "pink",
+      "purple"
     ]
   },
   {
     "id": 30,
-    "newCandidates": [
-      "fairy",
-      "penguin"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 27,
+    "wordIds": [
+      "tree",
+      "flower",
       "friend",
       "book"
     ]
   },
   {
     "id": 31,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
+      "fairy",
+      "penguin",
       "trampoline",
       "pool"
-    ],
-    "reviewCandidates": [
-      "tree",
-      "flower"
     ]
   },
   {
     "id": 32,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "bubbles",
-      "drum"
-    ],
-    "reviewCandidates": [
+      "drum",
+      "ice-cream",
+      "cake"
+    ]
+  },
+  {
+    "id": 33,
+    "kind": "learn",
+    "wordIds": [
+      "truck",
+      "turtle",
+      "throw",
+      "catch"
+    ]
+  },
+  {
+    "id": 34,
+    "kind": "repeat",
+    "repeatOf": 31,
+    "wordIds": [
+      "fairy",
+      "penguin",
       "trampoline",
       "pool"
     ]
   },
   {
-    "id": 33,
-    "newCandidates": [
-      "ice-cream",
-      "cake"
-    ],
-    "reviewCandidates": [
-      "fairy",
-      "penguin"
-    ]
-  },
-  {
-    "id": 34,
-    "newCandidates": [
-      "truck",
-      "turtle"
-    ],
-    "reviewCandidates": [
-      "ice-cream",
-      "cake"
-    ]
-  },
-  {
     "id": 35,
-    "newCandidates": [
-      "throw",
-      "catch"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 32,
+    "wordIds": [
       "bubbles",
-      "drum"
+      "drum",
+      "ice-cream",
+      "cake"
     ]
   },
   {
     "id": 36,
-    "newCandidates": [
-      "black",
-      "white"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 33,
+    "wordIds": [
+      "truck",
+      "turtle",
       "throw",
       "catch"
     ]
   },
   {
     "id": 37,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
+      "black",
+      "white",
       "butterfly",
       "bee"
-    ],
-    "reviewCandidates": [
-      "truck",
-      "turtle"
     ]
   },
   {
     "id": 38,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "bed",
-      "chair"
-    ],
-    "reviewCandidates": [
+      "chair",
+      "pirate",
+      "superhero"
+    ]
+  },
+  {
+    "id": 39,
+    "kind": "learn",
+    "wordIds": [
+      "water",
+      "sand",
+      "puzzle",
+      "pizza"
+    ]
+  },
+  {
+    "id": 40,
+    "kind": "repeat",
+    "repeatOf": 37,
+    "wordIds": [
+      "black",
+      "white",
       "butterfly",
       "bee"
     ]
   },
   {
-    "id": 39,
-    "newCandidates": [
-      "pirate",
-      "superhero"
-    ],
-    "reviewCandidates": [
-      "black",
-      "white"
-    ]
-  },
-  {
-    "id": 40,
-    "newCandidates": [
-      "water",
-      "sand"
-    ],
-    "reviewCandidates": [
-      "pirate",
-      "superhero"
-    ]
-  },
-  {
     "id": 41,
-    "newCandidates": [
-      "puzzle",
-      "pizza"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 38,
+    "wordIds": [
       "bed",
-      "chair"
+      "chair",
+      "pirate",
+      "superhero"
     ]
   },
   {
     "id": 42,
-    "newCandidates": [
-      "cookie",
-      "juice"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 39,
+    "wordIds": [
+      "water",
+      "sand",
       "puzzle",
       "pizza"
     ]
   },
   {
     "id": 43,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
+      "cookie",
+      "juice",
       "tiger",
       "rocket"
-    ],
-    "reviewCandidates": [
-      "water",
-      "sand"
     ]
   },
   {
     "id": 44,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "roll",
-      "hide"
-    ],
-    "reviewCandidates": [
+      "hide",
+      "brown",
+      "rainbow"
+    ]
+  },
+  {
+    "id": 45,
+    "kind": "learn",
+    "wordIds": [
+      "ladybug",
+      "snail",
+      "cup",
+      "milk"
+    ]
+  },
+  {
+    "id": 46,
+    "kind": "repeat",
+    "repeatOf": 43,
+    "wordIds": [
+      "cookie",
+      "juice",
       "tiger",
       "rocket"
     ]
   },
   {
-    "id": 45,
-    "newCandidates": [
-      "brown",
-      "rainbow"
-    ],
-    "reviewCandidates": [
-      "cookie",
-      "juice"
-    ]
-  },
-  {
-    "id": 46,
-    "newCandidates": [
-      "ladybug",
-      "snail"
-    ],
-    "reviewCandidates": [
-      "brown",
-      "rainbow"
-    ]
-  },
-  {
     "id": 47,
-    "newCandidates": [
-      "cup",
-      "milk"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 44,
+    "wordIds": [
       "roll",
-      "hide"
+      "hide",
+      "brown",
+      "rainbow"
     ]
   },
   {
     "id": 48,
-    "newCandidates": [
-      "castle",
-      "treasure"
-    ],
-    "reviewCandidates": [
+    "kind": "repeat",
+    "repeatOf": 45,
+    "wordIds": [
+      "ladybug",
+      "snail",
       "cup",
       "milk"
     ]
   },
   {
     "id": 49,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
+      "castle",
+      "treasure",
       "carrot",
       "bucket"
-    ],
-    "reviewCandidates": [
-      "ladybug",
-      "snail"
     ]
   },
   {
     "id": 50,
-    "newCandidates": [
+    "kind": "learn",
+    "wordIds": [
       "cow",
-      "horse"
-    ],
-    "reviewCandidates": [
+      "horse",
+      "panda",
+      "zebra"
+    ]
+  },
+  {
+    "id": 51,
+    "kind": "repeat",
+    "repeatOf": 49,
+    "wordIds": [
+      "castle",
+      "treasure",
       "carrot",
       "bucket"
+    ]
+  },
+  {
+    "id": 52,
+    "kind": "repeat",
+    "repeatOf": 50,
+    "wordIds": [
+      "cow",
+      "horse",
+      "panda",
+      "zebra"
     ]
   }
 ]

@@ -1,9 +1,7 @@
-import { stageCounts } from './curriculum.js';
-
 export function validateData({ config, words, stages }) {
   const fail = message => { throw new Error(message); };
   const positive = value => Number.isInteger(value) && value > 0;
-  if (config.schemaVersion !== 1) fail('Unsupported schema version');
+  if (config.schemaVersion !== 2) fail('Unsupported schema version');
   if (!/^[a-z][a-z0-9-]*$/.test(config.activeRoutine)) fail('Invalid routine ID');
   if (!positive(config.completionDays)) fail('Invalid completionDays');
   new Intl.DateTimeFormat('en', { timeZone: config.timeZone }).format();
@@ -24,16 +22,16 @@ export function validateData({ config, words, stages }) {
   for (const [index, stage] of stages.entries()) {
     if (!positive(stage.id) || stageIds.has(stage.id)) fail('Invalid or duplicate stage');
     stageIds.add(stage.id);
-    if (!Array.isArray(stage.newCandidates) || !Array.isArray(stage.reviewCandidates)) fail('Missing candidates');
-    const all = [...stage.newCandidates, ...stage.reviewCandidates];
+    if (!Array.isArray(stage.wordIds) || stage.wordIds.length !== 4) fail('Each stage requires four words');
+    const all = stage.wordIds;
     if (new Set(all).size !== all.length || all.some(id => !wordIds.has(id))) fail('Duplicate or unknown word reference');
-    if (stage.kind !== undefined && stage.kind !== 'learn') fail('Invalid stage kind');
-    const count = stageCounts(config, stage, index);
-    if (!count || !Number.isInteger(count.newWordCount) || count.newWordCount < 0 || !Number.isInteger(count.reviewWordCount) || count.reviewWordCount < 0 || count.newWordCount + count.reviewWordCount === 0) fail('Invalid word counts');
-    if (!positive(count.newWordCount)) fail('Invalid word counts');
-    if (stage.newCandidates.length < count.newWordCount || stage.reviewCandidates.length < count.reviewWordCount) fail(`Insufficient candidates in stage ${stage.id}`);
-    if (stage.reviewCandidates.slice(0, count.reviewWordCount).some(id => !introduced.has(id))) fail('Review word was not previously selected');
-    stage.newCandidates.slice(0, count.newWordCount).forEach(id => introduced.add(id));
+    if (stage.kind === 'repeat') {
+      const source = stages.slice(0, index).find(item => item.id === stage.repeatOf && item.kind === 'learn');
+      if (!source || all.some((id, i) => id !== source.wordIds[i])) fail('Repeat must match an earlier learning stage');
+    } else if (stage.kind === 'learn') {
+      if (all.some(id => introduced.has(id))) fail('Learning stage must contain only new words');
+      all.forEach(id => introduced.add(id));
+    } else fail('Invalid stage kind');
   }
   return true;
 }

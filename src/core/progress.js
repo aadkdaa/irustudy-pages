@@ -10,7 +10,7 @@ export function dateKey(now, timeZone) {
 }
 
 export function initialProgress(stages) {
-  return { schemaVersion: 1, currentStage: stages[0].id, completedDays: 0, history: [] };
+  return { schemaVersion: 1, curriculumVersion: 2, currentStage: stages[0].id, completedDays: 0, history: [] };
 }
 
 export function loadProgress(storage, stages) {
@@ -24,15 +24,19 @@ export function loadProgress(storage, stages) {
     value.history.some(item => !item || !/^\d{4}-\d{2}-\d{2}$/.test(item.date) || !Number.isInteger(item.stageId))) {
     throw new InvalidProgressError('Saved progress requires review');
   }
-  if (!stages.some(stage => stage.id === value.currentStage)) {
+  if (value.curriculumVersion !== undefined && value.curriculumVersion !== 2) throw new InvalidProgressError('Unsupported curriculum version');
+  const legacy = value.curriculumVersion === undefined;
+  if (legacy && Number.isInteger(value.currentStage) && value.currentStage >= 51 && value.currentStage <= 77) {
     // Retired review IDs 51–75 followed lessons 2, 4, …, 50;
     // IDs 76–77 were final reviews. Keep history when moving past them.
-    if (!Number.isInteger(value.currentStage) || value.currentStage < 51 || value.currentStage > 77) {
-      throw new InvalidProgressError('Saved progress requires review');
-    }
     const nextStage = Math.min((value.currentStage - 50) * 2 + 1, 50);
     if (!stages.some(stage => stage.id === nextStage)) throw new InvalidProgressError('Saved progress requires review');
     value = { ...value, currentStage: nextStage, completedDays: 0 };
+  }
+  if (!stages.some(stage => stage.id === value.currentStage)) throw new InvalidProgressError('Saved progress requires review');
+  if (legacy) {
+    // Preserve the saved stage number and history; retire only the old multi-day counter.
+    value = { ...value, curriculumVersion: 2, completedDays: 0 };
     storage.setItem(STORAGE_KEY, JSON.stringify(value));
   }
   return value;

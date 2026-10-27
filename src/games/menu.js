@@ -8,9 +8,9 @@ export function createGameMenu(onSelect, onExit) {
   const list = element('div', 'game-list');
   for (const game of games) {
     const card = button('', 'game-choice', () => onSelect(game.id));
-    const icon = element('span', 'game-choice-icon', 'A ↔ 그림');
+    const icon = element('span', 'game-choice-icon', game.icon);
     icon.setAttribute('aria-hidden', 'true');
-    card.append(icon, element('strong', 'game-choice-title', game.title), element('span', 'game-choice-description', '그림과 단어의 짝을 찾아요'));
+    card.append(icon, element('strong', 'game-choice-title', game.title), element('span', 'game-choice-description', game.description));
     list.append(card);
   }
   section.append(list, button('처음으로', 'secondary', onExit));

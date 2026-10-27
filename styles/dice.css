@@ -1,0 +1,55 @@
+.dice-screen { max-width: 680px; padding: 12px 0; text-align: center; }
+.dice-heading { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.dice-title { margin: 0; font-size: 28px; }
+.dice-counter { border-radius: 24px; padding: 8px 14px; background: #e8e3f3; color: #574773; font-weight: 700; }
+.dice-instructions { margin: 10px 0; color: var(--muted); font-size: 13px; }
+.dice-board { position: relative; width: 100%; aspect-ratio: 600 / 440; background: #e4ebd1 center / 100% 100% no-repeat; border-radius: 30px; margin: 16px auto 10px; }
+.dice-cell { position: absolute; display: grid; place-items: center; width: 6.6%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: #fffdf5; border: 2px solid #e3d6b3; box-shadow: 0 3px 0 #c7bb9670; font-size: clamp(11px, 2vw, 17px); font-weight: 800; color: #8b805e; transition: background .15s; }
+.dice-cell.is-passed { background: #d5e5bc; border-color: #abc58d; color: #57765a; }
+.dice-cell.is-target { outline: 3px dashed #bf8448; outline-offset: 3px; }
+.dice-cell.is-current { background: #e8dcf6; border-color: #9474b8; }
+.dice-cell:last-of-type { background: #f7dfa0; }
+.dice-pawn { position: absolute; z-index: 2; transform: translate(-50%, -85%); font-size: clamp(24px, 4vw, 38px); filter: drop-shadow(0 4px 2px #45583430);  pointer-events: none; }
+.dice-start, .dice-goal { position: absolute; font-size: clamp(11px, 1.8vw, 15px); font-weight: 800; color: #5c7752; }
+.dice-start { bottom: 1.5%; left: 12%; }
+.dice-goal { top: 3%; right: 9%; color: #a77637; }
+.dice-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 12px 0 4px; }
+.dice-controls .button { margin: 0; min-height: 48px; }
+.dice-face { display: grid; grid-template: repeat(3, 1fr) / repeat(3, 1fr); gap: 4px; width: 58px; height: 58px; padding: 10px; background: #fffcf4; border: 2px solid #cdbfe0; border-radius: 14px; box-shadow: 3px 5px 0 #b4a0c8, 0 8px 14px #51466424; transform: rotate(-6deg); }
+.dice-pip { border-radius: 50%; background: #765991; opacity: 0; }
+.dice-pip.is-on { opacity: 1; }
+.dice-status { font-size: 13px; color: var(--muted); margin: 8px 0; min-height: 20px; }
+.dice-panel { max-width: 480px; margin: auto; }
+.dice-question-heading { display: flex; align-items: center; justify-content: center; gap: 18px; margin-bottom: 8px; }
+.dice-word { margin: 0; font: 800 28px 'Nunito', sans-serif; }
+.dice-screen .dice-listen { margin: 0; padding: 10px 14px; min-height: 42px; font-size: 13px; }
+.dice-choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.dice-screen .dice-choice { padding: 5px; min-width: 0; background: #fffdf7; border: 2px solid #dcd5e5; border-radius: 16px; box-shadow: 0 3px 0 #dcd5e5; }
+.dice-choice .word-picture { width: 100%; height: 108px; margin: 0; border-radius: 10px; }
+.dice-choice .word-picture img { width: 100%; height: 100%; object-fit: contain; }
+.dice-choice:disabled { opacity: .65; }
+.dice-choice.is-correct { border-color: #6b9a70; background: #e6eddf; opacity: 1; }
+.dice-choice.is-wrong { border-color: #c45b42; opacity: 1; }
+.dice-screen .dice-exit { margin-top: 16px; min-height: 42px; padding: 10px 20px; }
+
+.dice-quiz { width: min(570px, calc(100% - 28px)); max-height: calc(100dvh - 32px); padding: 32px 24px 20px; border: 2px solid #e1d6eb; border-radius: 28px; background: #fffdf7; color: var(--ink); text-align: center; box-shadow: 0 24px 90px #30234340; }
+.dice-quiz[open] { animation: dice-popup .22s ease-out; }
+.dice-quiz::backdrop { background: #25322970; backdrop-filter: blur(6px); }
+.dice-quiz .dice-quiz-close { position: absolute; right: 10px; top: 8px; width: 36px; min-height: 36px; margin: 0; padding: 0; border-radius: 50%; background: #f0ebdf; color: #777667; font-size: 24px; }
+.dice-quiz-caption { color: #928569; margin: 0 0 14px; font-size: 13px; }
+.dice-quiz .dice-question-heading { flex-direction: column; gap: 4px; margin-bottom: 18px; }
+.dice-quiz .dice-word { font-size: 40px; }
+.dice-quiz .dice-listen { width: auto; min-height: 40px; margin: 0; padding: 8px 14px; font-size: 13px; }
+.dice-quiz .dice-choice { margin: 0; padding: 5px; min-width: 0; min-height: 0; background: #fffdf7; border: 2px solid #dcd5e5; border-radius: 18px; box-shadow: 0 4px 0 #dcd5e5; }
+.dice-quiz .dice-choice .word-picture { height: auto; aspect-ratio: 1; }
+.dice-quiz .dice-choice.is-correct { border-color: #6b9a70; background: #e6eddf; opacity: 1; }
+.dice-quiz .dice-choice.is-wrong { border-color: #c45b42; opacity: 1; }
+.dice-quiz-status { margin: 20px 0 0; min-height: 24px; color: #6f7867; font-size: 14px; }
+h2.dice-word:focus { outline: none; }
+@keyframes dice-popup { from { opacity: 0; transform: translateY(16px) scale(.96); } to { opacity: 1; transform: none; } }
+@media (max-width: 600px) { .dice-title { font-size: 24px; } .dice-quiz { padding: 32px 14px 18px; } .dice-choices { gap: 8px; } }
+@media (prefers-reduced-motion: reduce) { .dice-quiz[open] { animation: none; } .dice-cell, .dice-pawn { transition: none; } }
+
+.dice-tray { position: relative; display: grid; place-items: center; width: 112px; height: 78px; flex-shrink: 0; }
+.dice-tray::before { content: ""; position: absolute; bottom: 2px; width: 64px; height: 14px; border-radius: 50%; background: #c7bdab55; filter: blur(3px); }
+.dice-tray .dice-face { position: relative; z-index: 1; }

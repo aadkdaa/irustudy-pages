@@ -7,7 +7,7 @@ import { element, button, picture } from './ui/elements.js';
 import { canPlayGames } from './games/access.js';
 import { getGame } from './games/registry.js';
 import { createGameMenu } from './games/menu.js';
-import { todayStageWords } from './games/content.js';
+import { todayStageWords, wordsThroughTodayStage } from './games/content.js';
 import { fitViewport } from './ui/viewport.js';
 
 const app = document.querySelector('#app');
@@ -37,7 +37,8 @@ function startGame(id) {
   if (!canPlayGames(progress, data.config.timeZone)) { home(); focusTitle(app); return; }
   clearRoutine();
   screen = 'game';
-  game = getGame(id)({ container: app, words: todayStageWords(data, progress.history), onExit() { home(); focusTitle(app); } });
+  const words = id === 'dice' ? wordsThroughTodayStage(data, progress.history) : todayStageWords(data, progress.history);
+  game = getGame(id)({ container: app, words, onExit() { home(); focusTitle(app); } });
   game.start();
 }
 function save(next) {
